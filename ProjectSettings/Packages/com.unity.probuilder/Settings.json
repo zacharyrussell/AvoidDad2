@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
     "m_Name": "Settings",
     "m_Path": "ProjectSettings/Packages/com.unity.probuilder/Settings.json",
     "m_Dictionary": {
@@ -179,5 +180,9 @@
                 "value": "{\"m_Value\":0}"
             }
         ]
+=======
+    "m_Dictionary": {
+        "m_DictionaryValues": []
+>>>>>>> Stashed changes
     }
 }
