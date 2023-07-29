@@ -50,12 +50,12 @@ public class AdvPlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
-    [SerializeField] GameObject _camera;
     [SerializeField] StaminaBar _staminaBar;
 
 
     [HideInInspector] public TextMeshProUGUI text_speed;
-
+    bool gamePadConnected;
+    public UnitStamina _playerStamina = new UnitStamina(100f, 100f, 30f, false);
 
     private void Start()
     {
@@ -68,6 +68,7 @@ public class AdvPlayerMovement : MonoBehaviour
         readyToFastFall = true;
         isSprinting = false;
         isMoving = false;
+        gamePadConnected = Input.GetJoystickNames().Length != 0;
     }
 
     private void Update()
@@ -78,7 +79,7 @@ public class AdvPlayerMovement : MonoBehaviour
         MyInput();
         PlayerRegenStamina();
 
-        Debug.Log(GameManager.gameManager._playerStamina.Stamina);
+        //Debug.Log(GameManager.gameManager._playerStamina.Stamina);
  
 
         // handle drag
@@ -105,15 +106,10 @@ public class AdvPlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if(Gamepad.all[0].leftStick.x.value != 0f && Gamepad.all[0].leftStick.y.value != 0f){
-            isMoving = true;
-        }
-        else{
-            isMoving = false;
-        }
+        
 
         // when to jump
-        if ((Input.GetKey(jumpKey) || Gamepad.all[0].aButton.isPressed) && readyToJump && grounded)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -122,19 +118,7 @@ public class AdvPlayerMovement : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
 
-        if (Gamepad.all[0].rightTrigger.wasPressedThisFrame && readyToAirDash && !grounded)
-        {
-            readyToAirDash = false;
-            AirDash();
-        }
-
-        if (Gamepad.all[0].xButton.isPressed && readyToFastFall && !grounded)
-        {
-            readyToFastFall = false;
-            FastFall();
-        }
-
-        if (Gamepad.all[0].rightTrigger.isPressed && grounded)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             isSprinting = true;
         }
@@ -142,6 +126,63 @@ public class AdvPlayerMovement : MonoBehaviour
         {
             isSprinting = false;
         }
+
+        if (Input.GetKey(KeyCode.E) && readyToAirDash && !grounded)
+        {
+            readyToAirDash = false;
+            AirDash();
+        }
+
+        if (Input.GetKey(KeyCode.Q) && readyToFastFall && !grounded)
+        {
+            readyToFastFall = false;
+            FastFall();
+        }
+
+
+
+
+
+
+        if (gamePadConnected)
+        {
+            if (Gamepad.all[0].leftStick.x.value != 0f && Gamepad.all[0].leftStick.y.value != 0f)
+            {
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+            if (Gamepad.all[0].aButton.isPressed && readyToJump && grounded)
+            {
+                readyToJump = false;
+                Jump();
+                Invoke(nameof(ResetJump), jumpCooldown);
+            }
+            if (Gamepad.all[0].rightTrigger.wasPressedThisFrame && readyToAirDash && !grounded)
+            {
+                readyToAirDash = false;
+                AirDash();
+            }
+
+            if (Gamepad.all[0].xButton.isPressed && readyToFastFall && !grounded)
+            {
+                readyToFastFall = false;
+                FastFall();
+            }
+
+            if (Gamepad.all[0].rightTrigger.isPressed && grounded)
+            {
+                isSprinting = true;
+            }
+            else
+            {
+                isSprinting = false;
+            }
+        }
+
+
     }
 
     private void MovePlayer()
@@ -171,7 +212,7 @@ public class AdvPlayerMovement : MonoBehaviour
     private void AirDash()
     {
         // calculate movement direction
-        if (GameManager.gameManager._playerStamina.Stamina >= AirDashCost)
+        if (_playerStamina.Stamina >= AirDashCost)
         {
             moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
             rb.AddForce(moveDirection.normalized * airDashSpeed * 10f * airMultiplier, ForceMode.Impulse);
@@ -220,7 +261,7 @@ public class AdvPlayerMovement : MonoBehaviour
 
     private void PlayerUseStamina(float staminaAmount)
     {
-        GameManager.gameManager._playerStamina.UseStamina(staminaAmount);
+        _playerStamina.UseStamina(staminaAmount);
         _staminaBar.SetStamina(staminaAmount);
     }
 
@@ -237,8 +278,8 @@ public class AdvPlayerMovement : MonoBehaviour
             {
                 regenAmount = walkingRegen;
             }
-        GameManager.gameManager._playerStamina.RegenStamina(regenAmount);
-        _staminaBar.SetStamina(GameManager.gameManager._playerStamina.Stamina);
+        _playerStamina.RegenStamina(regenAmount);
+        _staminaBar.SetStamina(_playerStamina.Stamina);
         }
     }
 }

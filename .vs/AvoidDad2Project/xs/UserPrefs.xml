@@ -1,22 +1,24 @@
 ﻿<Properties StartupConfiguration="{A7DDC838-66FD-ECEC-F2CD-A23D90A178DF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PasswordNetworkManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/GameManager.cs">
     <Files>
-      <File FileName="Assets/NetworkButtons.cs" Line="12" Column="9" />
-      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
+      <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" Line="280" Column="74" />
+      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" Line="25" Column="31" />
       <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" />
       <File FileName="Assets/Scripts/Movement/PlayerCam.cs" />
-      <File FileName="Assets/AdvPlayerMovement.cs" Line="14" Column="28" />
-      <File FileName="Assets/PasswordNetworkManager.cs" Line="26" Column="48" />
+      <File FileName="Assets/PasswordNetworkManager.cs" />
+      <File FileName="Assets/_Scripts/GameManager.cs" Line="9" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AvoidDad2Project" expanded="True">
             <Node name="Assets" expanded="True">
+              <Node name="_Scripts" expanded="True">
+                <Node name="GameManager.cs" selected="True" />
+              </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="Movement" expanded="True" />
               </Node>
-              <Node name="PasswordNetworkManager.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -25,7 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="04e815bd-4494-4e45-9e4e-fd461ba8d513" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d6c1779e-6764-42ea-8e70-d96136eaaac7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

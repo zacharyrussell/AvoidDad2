@@ -13,12 +13,14 @@ public class PlayerCam : MonoBehaviour
     float xRotation;
     float yRotation;
 
-
+    bool gamePadConnected;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        gamePadConnected = Input.GetJoystickNames().Length != 0;
     }
 
     private void Update()
@@ -37,12 +39,16 @@ public class PlayerCam : MonoBehaviour
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
-        float padX = Gamepad.all[0].rightStick.x.value * Time.deltaTime * sensX;
-        float padY = Gamepad.all[0].rightStick.y.value * Time.deltaTime * sensY;
 
-        yRotation += padX;
+        if (gamePadConnected)
+        {
+            float padX = Gamepad.all[0].rightStick.x.value * Time.deltaTime * sensX;
+            float padY = Gamepad.all[0].rightStick.y.value * Time.deltaTime * sensY;
+            yRotation += padX;
+            xRotation -= padY;
+        }
 
-        xRotation -= padY;
+        
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         // rotate cam and orientation
