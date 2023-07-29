@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{A7DDC838-66FD-ECEC-F2CD-A23D90A178DF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AdvPlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PasswordNetworkManager.cs">
     <Files>
-      <File FileName="Assets/NetworkButtons.cs" Line="12" Column="25" />
-      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" Line="42" Column="1" />
-      <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" Line="15" Column="1" />
+      <File FileName="Assets/NetworkButtons.cs" Line="12" Column="9" />
+      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
+      <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" />
+      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" />
       <File FileName="Assets/AdvPlayerMovement.cs" Line="14" Column="28" />
+      <File FileName="Assets/PasswordNetworkManager.cs" Line="26" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +16,7 @@
               <Node name="Scripts" expanded="True">
                 <Node name="Movement" expanded="True" />
               </Node>
-              <Node name="AdvPlayerMovement.cs" selected="True" />
+              <Node name="PasswordNetworkManager.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -24,7 +25,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="8f7e5e84-77d9-4b39-b3e5-544e5827bb8e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="04e815bd-4494-4e45-9e4e-fd461ba8d513" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
