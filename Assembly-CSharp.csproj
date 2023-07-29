@@ -68,7 +68,15 @@
     <Compile Include="Assets/NetworkButtons.cs" />
     <Compile Include="Assets/Scripts/Movement/MoveCamera.cs" />
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Scripts/U10PS_SnowOverTime.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets/PasswordNetworkManager.cs" />
+=======
+    <Compile Include="Assets/Ultimate 10 Plus Shaders/Scripts/U10PS_DissolveOverTime.cs" />
+    <Compile Include="Assets/_Scripts/AdvPlayerMovement.cs" />
+    <Compile Include="Assets/PlayerNetwork.cs" />
+    <Compile Include="Assets/Ultimate 10 Plus Shaders/Shaders/Plexus/Plexus.cs" />
+    <Compile Include="Assets/_Scripts/UnitStamina.cs" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/ImportedAssets/TextMesh Pro/Shaders/TMPro.cginc" />

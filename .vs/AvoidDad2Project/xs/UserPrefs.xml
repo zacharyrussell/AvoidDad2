@@ -1,18 +1,33 @@
 ﻿<Properties StartupConfiguration="{A7DDC838-66FD-ECEC-F2CD-A23D90A178DF}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PasswordNetworkManager.cs">
     <Files>
+<<<<<<< Updated upstream
       <File FileName="Assets/NetworkButtons.cs" Line="12" Column="9" />
       <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
       <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" />
       <File FileName="Assets/Scripts/Movement/PlayerCam.cs" />
       <File FileName="Assets/AdvPlayerMovement.cs" Line="14" Column="28" />
       <File FileName="Assets/PasswordNetworkManager.cs" Line="26" Column="48" />
+=======
+      <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" Line="66" Column="28" />
+      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
+      <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" />
+      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" />
+      <File FileName="Assets/PasswordNetworkManager.cs" Line="36" Column="1" />
+      <File FileName="Assets/_Scripts/GameManager.cs" />
+      <File FileName="Assets/PlayerNetwork.cs" Line="51" Column="35" />
+      <File FileName="Library/PackageCache/com.unity.netcode.gameobjects@1.5.2/Runtime/Transports/UTP/UnityTransport.cs" Line="290" Column="10" />
+>>>>>>> Stashed changes
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AvoidDad2Project" expanded="True">
             <Node name="Assets" expanded="True">
+<<<<<<< Updated upstream
+=======
+              <Node name="_Scripts" expanded="True" />
+>>>>>>> Stashed changes
               <Node name="Scripts" expanded="True">
                 <Node name="Movement" expanded="True" />
               </Node>
@@ -25,7 +40,11 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< Updated upstream
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="04e815bd-4494-4e45-9e4e-fd461ba8d513" />
+=======
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7fb9ff1a-c831-4150-b009-9a7f83a24410" />
+>>>>>>> Stashed changes
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
