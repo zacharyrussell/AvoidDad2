@@ -72,6 +72,7 @@
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Scripts/U10PS_SnowOverTime.cs" />
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Scripts/U10PS_DissolveOverTime.cs" />
     <Compile Include="Assets/_Scripts/AdvPlayerMovement.cs" />
+    <Compile Include="Assets/PlayerNetwork.cs" />
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Shaders/Plexus/Plexus.cs" />
     <Compile Include="Assets/_Scripts/UnitStamina.cs" />
   </ItemGroup>

@@ -1,24 +1,24 @@
 ﻿<Properties StartupConfiguration="{A7DDC838-66FD-ECEC-F2CD-A23D90A178DF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/GameManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerNetwork.cs">
     <Files>
-      <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" Line="280" Column="74" />
-      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" Line="25" Column="31" />
+      <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" Line="280" Column="14" />
+      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
       <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" />
       <File FileName="Assets/Scripts/Movement/PlayerCam.cs" />
-      <File FileName="Assets/PasswordNetworkManager.cs" />
+      <File FileName="Assets/PasswordNetworkManager.cs" Line="133" Column="1" />
       <File FileName="Assets/_Scripts/GameManager.cs" Line="9" Column="5" />
+      <File FileName="Assets/PlayerNetwork.cs" Line="19" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AvoidDad2Project" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="_Scripts" expanded="True">
-                <Node name="GameManager.cs" selected="True" />
-              </Node>
+              <Node name="_Scripts" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="Movement" expanded="True" />
               </Node>
+              <Node name="PlayerNetwork.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -27,7 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d6c1779e-6764-42ea-8e70-d96136eaaac7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7fb9ff1a-c831-4150-b009-9a7f83a24410" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
