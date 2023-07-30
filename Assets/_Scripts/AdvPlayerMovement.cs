@@ -54,9 +54,9 @@ public class AdvPlayerMovement : MonoBehaviour
     [SerializeField] StaminaBar _staminaBar;
 
     [SerializeField] Animator _baby;
-
+    public UnitStamina _playerStamina = new UnitStamina(100f, 100f, 30f, false);
     [HideInInspector] public TextMeshProUGUI text_speed;
-
+    bool gamePadConnected = false;
     enum PlayerState
     {
         Idle,
@@ -74,7 +74,7 @@ public class AdvPlayerMovement : MonoBehaviour
         playerState = PlayerState.Idle;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
+        gamePadConnected = Input.GetJoystickNames().Length != 0;
         readyToJump = true;
         readyToAirDash = true;
         readyToFastFall = true;
@@ -111,13 +111,46 @@ public class AdvPlayerMovement : MonoBehaviour
         MovePlayer();
     }
 
-    private void MyInput()
-    {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
 
+    private void KeyboardControl()
+    {
         // when to jump
-        if ((Input.GetKey(jumpKey) || Gamepad.all[0].aButton.wasPressedThisFrame) && readyToJump && grounded)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded)
+        {
+            readyToJump = false;
+
+            Jump();
+
+            Invoke(nameof(ResetJump), jumpCooldown);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }
+
+        if (Input.GetKey(KeyCode.E) && readyToAirDash && !grounded)
+        {
+            readyToAirDash = false;
+            AirDash();
+        }
+
+        if (Input.GetKey(KeyCode.Q) && readyToFastFall && !grounded)
+        {
+            readyToFastFall = false;
+            FastFall();
+        }
+
+    }
+
+    private void ControllerControl()
+    {
+        // when to jump
+        if (Gamepad.all[0].aButton.wasPressedThisFrame && readyToJump && grounded)
         {
             readyToJump = false;
 
@@ -137,6 +170,16 @@ public class AdvPlayerMovement : MonoBehaviour
             readyToFastFall = false;
             FastFall();
         }
+    }
+
+    private void MyInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+        
+        if(gamePadConnected)ControllerControl();
+        KeyboardControl();
+        
 
     }
 
@@ -167,7 +210,7 @@ public class AdvPlayerMovement : MonoBehaviour
     private void AirDash()
     {
         // calculate movement direction
-        if (GameManager.gameManager._playerStamina.Stamina >= AirDashCost)
+        if (_playerStamina.Stamina >= AirDashCost)
         {
             moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
             rb.AddForce(moveDirection.normalized * airDashSpeed * 10f * airMultiplier, ForceMode.Impulse);
@@ -216,7 +259,7 @@ public class AdvPlayerMovement : MonoBehaviour
 
     private void PlayerUseStamina(float staminaAmount)
     {
-        GameManager.gameManager._playerStamina.UseStamina(staminaAmount);
+        _playerStamina.UseStamina(staminaAmount);
     }
 
     private void PlayerRegenStamina()
@@ -224,14 +267,14 @@ public class AdvPlayerMovement : MonoBehaviour
         switch (playerState)
         {
             case PlayerState.Idle:
-            GameManager.gameManager._playerStamina.RegenStamina(standingRegen);
+            _playerStamina.RegenStamina(standingRegen);
             break;
 
             case PlayerState.Walking:
-            GameManager.gameManager._playerStamina.RegenStamina(walkingRegen);
+            _playerStamina.RegenStamina(walkingRegen);
             break;
         }
-        _staminaBar.SetStamina(GameManager.gameManager._playerStamina.Stamina);
+        _staminaBar.SetStamina(_playerStamina.Stamina);
         }
     
 
@@ -252,7 +295,11 @@ public class AdvPlayerMovement : MonoBehaviour
         {
             if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
-                if (Gamepad.all[0].rightTrigger.isPressed && Input.GetAxis("Vertical") > 0)
+                if (gamePadConnected && Gamepad.all[0].rightTrigger.isPressed && Input.GetAxis("Vertical") > 0)
+                {
+                    playerState = PlayerState.Sprinting;
+                }
+                else if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
                 {
                     playerState = PlayerState.Sprinting;
                 }
