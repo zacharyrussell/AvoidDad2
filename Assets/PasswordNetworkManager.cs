@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.Netcode;
+using Unity.Netcode.Transports;
 using System;
 using System.Text;
+using Unity.Networking.Transport;
+using Unity.Netcode.Transports.UTP;
+
 public class PasswordNetworkManager : MonoBehaviour
 {
     [SerializeField] private TMP_InputField passwordInput;
+    [SerializeField] private TMP_InputField AddressInput;
     [SerializeField] private GameObject passwordEntryUI;
     [SerializeField] private GameObject leaveButton;
-    public GameObject menu; 
+    [SerializeField] private UnityTransport Transport;
+
+    public GameObject menu;
     public void Host()
     {
         if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
@@ -20,14 +27,23 @@ public class PasswordNetworkManager : MonoBehaviour
         }
     }
 
+
+
+    public void UpdateIPAddress()
+    {
+        Transport.ConnectionData.Address = AddressInput.text;
+    }
+
     public void Client()
     {
+
         NetworkManager.Singleton.NetworkConfig.ConnectionData = Encoding.ASCII.GetBytes(passwordInput.text);
         NetworkManager.Singleton.StartClient();
     }
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             Leave();
@@ -98,7 +114,7 @@ public class PasswordNetworkManager : MonoBehaviour
 
         // The client identifier to be authenticated
         var clientId = request.ClientNetworkId;
-        if(clientId == NetworkManager.Singleton.LocalClientId)
+        if (clientId == NetworkManager.Singleton.LocalClientId)
         {
             response.Approved = true;
             response.CreatePlayerObject = true;
@@ -113,3 +129,4 @@ public class PasswordNetworkManager : MonoBehaviour
     }
 
 }
+
