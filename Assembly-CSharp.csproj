@@ -81,6 +81,7 @@
     <Compile Include="Assets/_Scripts/StaminaBar.cs" />
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Scripts/U10PS_MouseRotation.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets/spawner.cs" />
     <Compile Include="Assets/Scripts/Movement/MoveCamera.cs" />
     <Compile Include="Assets/_Scripts/NetworkButtons.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Attributes/MinAttribute.cs" />

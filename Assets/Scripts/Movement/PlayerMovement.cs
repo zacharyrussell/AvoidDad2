@@ -43,6 +43,7 @@ public class PlayerMovement : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+        print(IsOwner);
         if (!IsOwner) return;
         _camera.SetActive(true);
     }

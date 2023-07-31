@@ -50,6 +50,7 @@ public class PasswordNetworkManager : MonoBehaviour
             Leave();
         }
     }
+
     public void Leave()
     {
         if (NetworkManager.Singleton.IsHost)
@@ -107,17 +108,18 @@ public class PasswordNetworkManager : MonoBehaviour
 
 
     //[ServerRpc(RequireOwnership = false)] //server owns this object but client can request a spawn
-    //public void SpawnPlayerServerRpc(ulong clientId, int prefabId)
-    //{
-    //    GameObject newPlayer;
-    //    if (prefabId == 0)
-    //        newPlayer = (GameObject)Instantiate(baby, Vector3.zero, Quaternion.identity);
-    //    else
-    //        newPlayer = (GameObject)Instantiate(baby, Vector3.zero, Quaternion.identity);
-    //    var netObj = newPlayer.GetComponent<NetworkObject>();
-    //    newPlayer.SetActive(true);
-    //    netObj.SpawnAsPlayerObject(clientId, true);
-    //}
+
+    public void SpawnPlayerServerRpc(ulong clientId, int prefabId)
+    {
+        GameObject newPlayer;
+        if (prefabId == 0)
+            newPlayer = (GameObject)Instantiate(baby, Vector3.zero, Quaternion.identity);
+        else
+            newPlayer = (GameObject)Instantiate(baby, Vector3.zero, Quaternion.identity);
+        var netObj = newPlayer.GetComponent<NetworkObject>();
+        newPlayer.SetActive(true);
+        netObj.SpawnAsPlayerObject(clientId, true);
+    }
 
     private void HandleClientDisconnected(ulong clientId)
     {
@@ -146,7 +148,7 @@ public class PasswordNetworkManager : MonoBehaviour
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
             response.Approved = true;
-            response.CreatePlayerObject = true;
+            response.CreatePlayerObject = false;
             //if(SelectedCharacter.text == "Dad")
             //{
 
@@ -172,7 +174,7 @@ public class PasswordNetworkManager : MonoBehaviour
         //{
         //    response.PlayerPrefabHash = 3030887073;
         //}
-        response.CreatePlayerObject = true;
+        response.CreatePlayerObject = false;
         response.Approved = approval;
     }
 

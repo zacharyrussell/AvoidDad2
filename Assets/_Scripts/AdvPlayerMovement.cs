@@ -68,6 +68,7 @@ public class AdvPlayerMovement : MonoBehaviour
     PlayerState lastState;
     PlayerState playerState;
 
+
     private void Start()
     {
         lastState = PlayerState.Idle;
