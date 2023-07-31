@@ -8,6 +8,7 @@ using System;
 using System.Text;
 using Unity.Networking.Transport;
 using Unity.Netcode.Transports.UTP;
+using UnityEngine.SceneManagement;
 
 public class PasswordNetworkManager : MonoBehaviour
 {
@@ -16,18 +17,20 @@ public class PasswordNetworkManager : MonoBehaviour
     [SerializeField] private GameObject passwordEntryUI;
     [SerializeField] private GameObject leaveButton;
     [SerializeField] private UnityTransport Transport;
+    [SerializeField] private TMP_Text SelectedCharacter;
+    [SerializeField] private GameObject baby;
+    [SerializeField] private GameObject dad;
 
     public GameObject menu;
+
     public void Host()
     {
         if (!NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsServer)
         {
             NetworkManager.Singleton.ConnectionApprovalCallback += ApprovalCheck;
             NetworkManager.Singleton.StartHost();
-        }
+         }
     }
-
-
 
     public void UpdateIPAddress()
     {
@@ -36,14 +39,12 @@ public class PasswordNetworkManager : MonoBehaviour
 
     public void Client()
     {
-
         NetworkManager.Singleton.NetworkConfig.ConnectionData = Encoding.ASCII.GetBytes(passwordInput.text);
         NetworkManager.Singleton.StartClient();
     }
 
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.P))
         {
             Leave();
@@ -71,7 +72,7 @@ public class PasswordNetworkManager : MonoBehaviour
     {
         NetworkManager.Singleton.OnServerStarted += HandleServerStarted;
         NetworkManager.Singleton.OnClientConnectedCallback += HandleClientConnected;
-        NetworkManager.Singleton.OnClientDisconnectCallback += HandleClientDisconnected;
+        NetworkManager.Singleton.OnClientDisconnectCallback += HandleClientDisconnected;        
     }
 
     private void HandleServerStarted()
@@ -81,15 +82,42 @@ public class PasswordNetworkManager : MonoBehaviour
             HandleClientConnected(NetworkManager.Singleton.LocalClientId);
         }
     }
+
+
     private void HandleClientConnected(ulong clientId)
     {
+        
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
+
             menu.SetActive(false);
             passwordEntryUI.SetActive(false);
             leaveButton.SetActive(true);
+
+            //GameObject go = Instantiate(baby, Vector3.zero, Quaternion.identity);
+            //go.SetActive(true);
+            //go.GetComponent<NetworkObject>().SpawnWithOwnership(NetworkManager.Singleton.LocalClientId, true);
+            //SpawnServerRPC(NetworkManager.Singleton.LocalClientId);
+            //server RPC to spawn player
+
+            //if (NetworkManager.Singleton.IsClient) SpawnPlayerServerRpc(clientId, 0);
         }
+       
     }
+
+
+    //[ServerRpc(RequireOwnership = false)] //server owns this object but client can request a spawn
+    //public void SpawnPlayerServerRpc(ulong clientId, int prefabId)
+    //{
+    //    GameObject newPlayer;
+    //    if (prefabId == 0)
+    //        newPlayer = (GameObject)Instantiate(baby, Vector3.zero, Quaternion.identity);
+    //    else
+    //        newPlayer = (GameObject)Instantiate(baby, Vector3.zero, Quaternion.identity);
+    //    var netObj = newPlayer.GetComponent<NetworkObject>();
+    //    newPlayer.SetActive(true);
+    //    netObj.SpawnAsPlayerObject(clientId, true);
+    //}
 
     private void HandleClientDisconnected(ulong clientId)
     {
@@ -98,6 +126,7 @@ public class PasswordNetworkManager : MonoBehaviour
             menu.SetActive(true);
             leaveButton.SetActive(false);
             passwordEntryUI.SetActive(true);
+            
         }
     }
 
@@ -118,12 +147,31 @@ public class PasswordNetworkManager : MonoBehaviour
         {
             response.Approved = true;
             response.CreatePlayerObject = true;
+            //if(SelectedCharacter.text == "Dad")
+            //{
+
+            //    response.PlayerPrefabHash = 1557686693;
+            //}
+            //else
+            //{
+            //    response.PlayerPrefabHash = 3030887073;
+            //}
             return;
         }
         // Additional connection data defined by user code
         var connectionData = request.Payload;
         string password = Encoding.ASCII.GetString(connectionData);
         bool approval = password == passwordInput.text;
+        //response.CreatePlayerObject = true;
+        //if (SelectedCharacter.text == "Dad")
+        //{
+
+        //    response.PlayerPrefabHash = 1557686693;
+        //}
+        //else
+        //{
+        //    response.PlayerPrefabHash = 3030887073;
+        //}
         response.CreatePlayerObject = true;
         response.Approved = approval;
     }

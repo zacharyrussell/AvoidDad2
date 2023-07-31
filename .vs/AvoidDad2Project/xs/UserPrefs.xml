@@ -1,23 +1,32 @@
 ﻿<Properties StartupConfiguration="{A7DDC838-66FD-ECEC-F2CD-A23D90A178DF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Movement/PlayerCam.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PasswordNetworkManager.cs">
     <Files>
       <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" Line="302" Column="57" />
       <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
       <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" />
-      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" Line="39" Column="71" />
-      <File FileName="Assets/_Scripts/GameManager.cs" Line="9" Column="5" />
+      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" />
+      <File FileName="Assets/_Scripts/GameManager.cs" />
       <File FileName="Assets/PlayerNetwork.cs" />
+      <File FileName="Assets/GreenForest/PostProcessing/Editor/PropertyDrawers/MinDrawer.cs" />
+      <File FileName="Assets/CharacterSelect.cs" Line="29" Column="15" />
+      <File FileName="Assets/PasswordNetworkManager.cs" Line="13" Column="52" />
+      <File FileName="Library/PackageCache/com.unity.netcode.gameobjects@1.5.2/Runtime/Core/NetworkManager.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AvoidDad2Project" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="_Scripts" expanded="True" />
-              <Node name="Scripts" expanded="True">
-                <Node name="Movement" expanded="True">
-                  <Node name="PlayerCam.cs" selected="True" />
+              <Node name="GreenForest" expanded="True">
+                <Node name="PostProcessing" expanded="True">
+                  <Node name="Editor" expanded="True">
+                    <Node name="PropertyDrawers" expanded="True" />
+                  </Node>
                 </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="Movement" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -27,7 +36,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7fb9ff1a-c831-4150-b009-9a7f83a24410" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="06d93366-5c0e-4de1-b2ad-c453e89effd1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
