@@ -1,35 +1,32 @@
 ﻿<Properties StartupConfiguration="{A7DDC838-66FD-ECEC-F2CD-A23D90A178DF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/spawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Movement/PlayerCam.cs">
     <Files>
-      <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" Line="302" Column="57" />
+      <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" Line="325" Column="20" />
       <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
       <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" />
-      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" />
+      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" Line="40" Column="1" />
       <File FileName="Assets/_Scripts/GameManager.cs" />
-      <File FileName="Assets/PlayerNetwork.cs" Line="19" Column="47" />
+      <File FileName="Assets/PlayerNetwork.cs" Line="27" Column="13" />
       <File FileName="Assets/GreenForest/PostProcessing/Editor/PropertyDrawers/MinDrawer.cs" />
-      <File FileName="Assets/CharacterSelect.cs" Line="35" Column="1" />
-      <File FileName="Assets/PasswordNetworkManager.cs" Line="100" Column="32" />
+      <File FileName="Assets/CharacterSelect.cs" />
+      <File FileName="Assets/PasswordNetworkManager.cs" />
       <File FileName="Library/PackageCache/com.unity.netcode.gameobjects@1.5.2/Runtime/Core/NetworkManager.cs" />
-      <File FileName="Assets/spawner.cs" Line="5" Column="37" />
+      <File FileName="Assets/spawner.cs" />
+      <File FileName="Assets/_Scripts/ClientPrediction.cs" />
+      <File FileName="Assets/_Scripts/Client.cs" />
+      <File FileName="Assets/_Scripts/Server.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AvoidDad2Project" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="_Scripts" expanded="True" />
-              <Node name="GreenForest" expanded="True">
-                <Node name="PostProcessing" expanded="True">
-                  <Node name="Editor" expanded="True">
-                    <Node name="PropertyDrawers" expanded="True" />
-                  </Node>
-                </Node>
+              <Node name="_Scripts" expanded="True">
+                <Node name="AdvPlayerMovement.cs" selected="True" />
               </Node>
               <Node name="Scripts" expanded="True">
                 <Node name="Movement" expanded="True" />
               </Node>
-              <Node name="spawner.cs" selected="True" />
             </Node>
           </Node>
         </State>

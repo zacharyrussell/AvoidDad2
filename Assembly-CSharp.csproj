@@ -106,12 +106,15 @@
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Scripts/U10PS_DissolveOverTime.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/GrainModel.cs" />
     <Compile Include="Assets/_Scripts/AdvPlayerMovement.cs" />
+    <Compile Include="Assets/_Scripts/Client.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Utils/GraphicsUtils.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/TaaComponent.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Utils/MaterialFactory.cs" />
     <Compile Include="Assets/PlayerNetwork.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/VignetteComponent.cs" />
+    <Compile Include="Assets/_Scripts/Server.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/ChromaticAberrationModel.cs" />
+    <Compile Include="Assets/_Scripts/ClientPrediction.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/ScreenSpaceReflectionModel.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/ScreenSpaceReflectionComponent.cs" />
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Shaders/Plexus/Plexus.cs" />

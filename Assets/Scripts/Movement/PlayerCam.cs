@@ -14,6 +14,8 @@ public class PlayerCam : MonoBehaviour
     float yRotation;
     [SerializeField] Rigidbody player;
     bool gamePadConnected = false;
+    public float rotationSpeed = 0.1f;
+    private Vector3 velocity = Vector3.zero;
 
     private void Start()
     {
@@ -34,9 +36,17 @@ public class PlayerCam : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         // rotate cam and orientation
-        transform.rotation = Quaternion.Euler(0, yRotation, 0);
-        orientation.rotation = Quaternion.Euler(0, yRotation, 0);
-        player.transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        //orientation.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        player.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(xRotation, yRotation, 0), 0.1f);
+        //orientation.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(xRotation, yRotation, 0), Time.deltaTime);
+        //player.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(xRotation, yRotation, 0), 0.1f);
+
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(xRotation, yRotation, 0), rotationSpeed * Time.deltaTime);
+        //orientation.rotation = Quaternion.Slerp(orientation.rotation, Quaternion.Euler(xRotation, yRotation, 0), rotationSpeed * Time.deltaTime);
+        //player.transform.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 
     private void joystickControl()
@@ -59,8 +69,7 @@ public class PlayerCam : MonoBehaviour
     {
         // get mouse input
 
-        mouseControl();
-
         if(gamePadConnected)joystickControl();
+        else mouseControl();
     }
 }

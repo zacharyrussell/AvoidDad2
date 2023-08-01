@@ -5,7 +5,7 @@ using TMPro;
 using Unity.Netcode;
 using UnityEngine.InputSystem;
 
-public class AdvPlayerMovement : MonoBehaviour
+public class AdvPlayerMovement : NetworkBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
@@ -281,43 +281,49 @@ public class AdvPlayerMovement : MonoBehaviour
 
     private void UpdatePlayerState()
     {
-        if (!grounded)
-        {
-            if (readyToAirDash)
+   
+            if (!grounded)
             {
-                playerState = PlayerState.Jumping;
-            }
-            else
-            {
-                playerState = PlayerState.AirDashing;
-            }
-        }
-        else
-        {
-            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-            {
-                if (gamePadConnected && Gamepad.all[0].rightTrigger.isPressed && Input.GetAxis("Vertical") > 0)
+                if (readyToAirDash)
                 {
-                    playerState = PlayerState.Sprinting;
-                }
-                else if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
-                {
-                    playerState = PlayerState.Sprinting;
+                    playerState = PlayerState.Jumping;
                 }
                 else
                 {
-                    playerState = PlayerState.Walking;
+                    playerState = PlayerState.AirDashing;
                 }
             }
             else
             {
-                playerState = PlayerState.Idle;
+                if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+                {
+                    if (gamePadConnected && Gamepad.all[0].rightTrigger.isPressed && Input.GetAxis("Vertical") > 0)
+                    {
+                        playerState = PlayerState.Sprinting;
+                    }
+                    else if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0)
+                    {
+                        playerState = PlayerState.Sprinting;
+                    }
+                    else
+                    {
+                        playerState = PlayerState.Walking;
+                    }
+                }
+                else
+                {
+                    playerState = PlayerState.Idle;
+                }
             }
-        }
+        
     }
 
     private void AnimatePlayer()
     {
+        if (!IsOwner)
+        {
+            return;
+        }
         if (lastState != playerState)
         {
             _baby.SetBool("isIdle", false);

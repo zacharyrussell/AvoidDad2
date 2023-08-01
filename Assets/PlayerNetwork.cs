@@ -24,6 +24,7 @@ public class PlayerNetwork : NetworkBehaviour
         {
             transform.position = Vector3.SmoothDamp(transform.position, _netState.Value.Position, ref _vel, _cheapInterpolationTime);
             transform.rotation = Quaternion.Euler(0, Mathf.SmoothDampAngle(transform.rotation.eulerAngles.y, _netState.Value.Rotation.y, ref _rotVel, _cheapInterpolationTime), 0);
+            
         }
     }
 
