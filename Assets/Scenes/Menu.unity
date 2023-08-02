@@ -449,7 +449,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 38898976}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2024516984}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: playAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &38898976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1159,7 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4108,7 +4120,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1314202402}
+        m_TargetAssemblyTypeName: PasswordNetworkManager, Assembly-CSharp
+        m_MethodName: UpdateIPAddress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6279,7 +6303,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1314202402}
         m_TargetAssemblyTypeName: PasswordNetworkManager, Assembly-CSharp
         m_MethodName: UpdateIPAddress
         m_Mode: 1
@@ -11159,7 +11183,7 @@ MonoBehaviour:
     EnableNetworkLogs: 1
     OldPrefabList: []
   RunInBackground: 1
-  LogLevel: 1
+  LogLevel: 0
 --- !u!114 &1314202401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11207,6 +11231,7 @@ MonoBehaviour:
   SelectedCharacter: {fileID: 1004472253}
   baby: {fileID: 4279944362114849782, guid: 52fbc8891eb334e4d8b78d414428846b, type: 3}
   dad: {fileID: 4279944362114849782, guid: 52fbc8891eb334e4d8b78d414428846b, type: 3}
+  gameOver: {fileID: 428245001}
   menu: {fileID: 1267584909}
 --- !u!1001 &1316899903
 PrefabInstance:
@@ -11855,8 +11880,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baby: {fileID: 4279944362114849782, guid: 52fbc8891eb334e4d8b78d414428846b, type: 3}
-  dad: {fileID: 4337949567849707131, guid: 24844dfd33506458a973d6237c0fc911, type: 3}
+  dad: {fileID: 3107312696194478404, guid: fc8486f14e4254c7da4cf9f1ef37a4d3, type: 3}
   SelectedCharacter: {fileID: 1004472253}
+  Players: []
+  charId: 0
 --- !u!4 &1349807946
 Transform:
   m_ObjectHideFlags: 0
@@ -15532,7 +15559,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1920203875}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2024516984}
+        m_TargetAssemblyTypeName: GameLogic, Assembly-CSharp
+        m_MethodName: mainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1920203875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16085,6 +16124,72 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 924184545}
   m_SourcePrefab: {fileID: 100100000, guid: 189d32eedfaefa141a89c5e127519df1, type: 3}
+--- !u!1 &2024516983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2024516985}
+  - component: {fileID: 2024516984}
+  - component: {fileID: 2024516986}
+  m_Layer: 0
+  m_Name: GameLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!114 &2024516984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024516983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ef34420e2244f7792b31b86e18f2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: {fileID: 428245001}
+--- !u!4 &2024516985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024516983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 554.9045, y: 190.00485, z: -2.0183663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2024516986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024516983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 150554159
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 1
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!4 &2051375683 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3605829315332877754, guid: 3d81e66d37307954e954061e93e7d430,
@@ -16160,7 +16265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -16990,3 +17095,4 @@ SceneRoots:
   - {fileID: 1397258650}
   - {fileID: 1349807946}
   - {fileID: 1951271124}
+  - {fileID: 2024516985}

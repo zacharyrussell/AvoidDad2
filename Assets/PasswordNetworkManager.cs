@@ -20,8 +20,24 @@ public class PasswordNetworkManager : MonoBehaviour
     [SerializeField] private TMP_Text SelectedCharacter;
     [SerializeField] private GameObject baby;
     [SerializeField] private GameObject dad;
+    [SerializeField] private GameObject gameOver;
 
     public GameObject menu;
+
+    [ServerRpc(RequireOwnership = false)]
+    public void BabyCaughtServerRpc()
+    {
+        gameOver.SetActive(true);
+        BabyCaughtClientRpc();
+    }
+
+    [ClientRpc]
+    public void BabyCaughtClientRpc()
+    {
+        print("Calling on Client");
+        gameOver.SetActive(true);
+    }
+
 
     public void Host()
     {
@@ -67,6 +83,7 @@ public class PasswordNetworkManager : MonoBehaviour
         Cursor.visible = true;
         leaveButton.SetActive(false);
         passwordEntryUI.SetActive(true);
+        gameOver.SetActive(false);
     }
 
     private void Start()
@@ -94,31 +111,8 @@ public class PasswordNetworkManager : MonoBehaviour
             menu.SetActive(false);
             passwordEntryUI.SetActive(false);
             leaveButton.SetActive(true);
-
-            //GameObject go = Instantiate(baby, Vector3.zero, Quaternion.identity);
-            //go.SetActive(true);
-            //go.GetComponent<NetworkObject>().SpawnWithOwnership(NetworkManager.Singleton.LocalClientId, true);
-            //SpawnServerRPC(NetworkManager.Singleton.LocalClientId);
-            //server RPC to spawn player
-
-            //if (NetworkManager.Singleton.IsClient) SpawnPlayerServerRpc(clientId, 0);
         }
        
-    }
-
-
-    //[ServerRpc(RequireOwnership = false)] //server owns this object but client can request a spawn
-
-    public void SpawnPlayerServerRpc(ulong clientId, int prefabId)
-    {
-        GameObject newPlayer;
-        if (prefabId == 0)
-            newPlayer = (GameObject)Instantiate(baby, Vector3.zero, Quaternion.identity);
-        else
-            newPlayer = (GameObject)Instantiate(baby, Vector3.zero, Quaternion.identity);
-        var netObj = newPlayer.GetComponent<NetworkObject>();
-        newPlayer.SetActive(true);
-        netObj.SpawnAsPlayerObject(clientId, true);
     }
 
     private void HandleClientDisconnected(ulong clientId)
@@ -128,7 +122,7 @@ public class PasswordNetworkManager : MonoBehaviour
             menu.SetActive(true);
             leaveButton.SetActive(false);
             passwordEntryUI.SetActive(true);
-            
+            gameOver.SetActive(false);
         }
     }
 
@@ -149,31 +143,12 @@ public class PasswordNetworkManager : MonoBehaviour
         {
             response.Approved = true;
             response.CreatePlayerObject = false;
-            //if(SelectedCharacter.text == "Dad")
-            //{
-
-            //    response.PlayerPrefabHash = 1557686693;
-            //}
-            //else
-            //{
-            //    response.PlayerPrefabHash = 3030887073;
-            //}
             return;
         }
         // Additional connection data defined by user code
         var connectionData = request.Payload;
         string password = Encoding.ASCII.GetString(connectionData);
         bool approval = password == passwordInput.text;
-        //response.CreatePlayerObject = true;
-        //if (SelectedCharacter.text == "Dad")
-        //{
-
-        //    response.PlayerPrefabHash = 1557686693;
-        //}
-        //else
-        //{
-        //    response.PlayerPrefabHash = 3030887073;
-        //}
         response.CreatePlayerObject = false;
         response.Approved = approval;
     }

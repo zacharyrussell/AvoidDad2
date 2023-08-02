@@ -59,12 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/_Scripts/GameManager.cs" />
+    <Compile Include="Assets/_Scripts/DaddyGrab.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Utils/RenderTextureFactory.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/BuiltinDebugViewsModel.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/AntialiasingModel.cs" />
     <Compile Include="Assets/Scripts/Movement/PlayerCam.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/FogModel.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/DepthOfFieldComponent.cs" />
+    <Compile Include="Assets/Scripts/Movement/PlayerCam2.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/BloomComponent.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Attributes/TrackballAttribute.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/AmbientOcclusionModel.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/VignetteModel.cs" />
     <Compile Include="Assets/PasswordNetworkManager.cs" />
+    <Compile Include="Assets/GameLogic.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/EyeAdaptationComponent.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/PostProcessingModel.cs" />
     <Compile Include="Assets/Scripts/Addons/activateOnPlay.cs" />

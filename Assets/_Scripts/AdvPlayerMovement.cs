@@ -90,8 +90,8 @@ public class AdvPlayerMovement : NetworkBehaviour
         PlayerRegenStamina();
         UpdatePlayerState();
         AnimatePlayer();
-        Debug.Log(playerState);
-        Debug.Log(grounded);
+        //Debug.Log(playerState);
+        //Debug.Log(grounded);
 
         // handle drag
         if (grounded)
@@ -159,7 +159,7 @@ public class AdvPlayerMovement : NetworkBehaviour
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
-
+        
         if (Gamepad.all[0].rightTrigger.wasPressedThisFrame && readyToAirDash && !grounded)
         {
             readyToAirDash = false;
@@ -277,7 +277,6 @@ public class AdvPlayerMovement : NetworkBehaviour
         }
         _staminaBar.SetStamina(_playerStamina.Stamina);
         }
-    
 
     private void UpdatePlayerState()
     {
@@ -295,9 +294,9 @@ public class AdvPlayerMovement : NetworkBehaviour
             }
             else
             {
-                if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-                {
-                    if (gamePadConnected && Gamepad.all[0].rightTrigger.isPressed && Input.GetAxis("Vertical") > 0)
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                if (gamePadConnected && (Gamepad.all[0].leftStickButton.isPressed || Gamepad.all[0].rightTrigger.isPressed) && Input.GetAxis("Vertical") > 0)
                     {
                         playerState = PlayerState.Sprinting;
                     }

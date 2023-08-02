@@ -8,8 +8,9 @@ public class spawner : NetworkBehaviour
 {
     [SerializeField] GameObject baby;
     [SerializeField] GameObject dad;
-    [SerializeField] TMP_Text SelectedCharacter; 
-
+    [SerializeField] TMP_Text SelectedCharacter;
+    public List<GameObject> Players;
+    public int charId; 
     public override void OnNetworkSpawn()
     {
         if (IsClient)
@@ -17,11 +18,13 @@ public class spawner : NetworkBehaviour
             if(SelectedCharacter.text == "Dad")
             {
                 print("DAD SPAWNING");
+                charId = 1;
                 serverSpawnServerRpc(NetworkManager.Singleton.LocalClientId, 1);
             }
             else
             {
                 print("Baby SPAWNING");
+                charId = 0;
                 serverSpawnServerRpc(NetworkManager.Singleton.LocalClientId, 0);
             }
 
@@ -29,8 +32,44 @@ public class spawner : NetworkBehaviour
 
     }
 
+    [ServerRpc]
+    public void DespawnAllServerRpc()
+    {
+        DespawnClientRpc();
+
+        List<GameObject> allPlayers = new List<GameObject>();
+
+        allPlayers.AddRange(GameObject.FindGameObjectsWithTag("Dad"));
+        allPlayers.AddRange(GameObject.FindGameObjectsWithTag("Baby"));
+        
+
+        
+        foreach (GameObject player in allPlayers)
+        {
+
+            //player.GetComponent<NetworkObject>().Despawn();
+            Destroy(player);
+        }
+        
+    }
 
 
+    [ClientRpc]
+    public void DespawnClientRpc()
+    {
+        List<GameObject> allPlayers = new List<GameObject>();
+
+        allPlayers.AddRange(GameObject.FindGameObjectsWithTag("Dad"));
+        allPlayers.AddRange(GameObject.FindGameObjectsWithTag("Baby"));
+        
+        foreach (GameObject player in allPlayers)
+        {
+            print(player.tag);
+            print("Despawning");
+            //player.GetComponent<NetworkObject>().Despawn();
+            Destroy(player);
+        }
+    }
 
 
     [ServerRpc(RequireOwnership = false)]
@@ -59,6 +98,7 @@ public class spawner : NetworkBehaviour
         NetworkObject m_SpawnedNetworkObject = m_PrefabInstance.GetComponent<NetworkObject>();
         //m_SpawnedNetworkObject.SpawnAsPlayerObject(clientId);
 
+        //Players.Add(m_PrefabInstance);
         m_SpawnedNetworkObject.SpawnWithOwnership(clientId);
 
     }
