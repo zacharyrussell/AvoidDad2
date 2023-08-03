@@ -1,36 +1,37 @@
 ﻿<Properties StartupConfiguration="{A7DDC838-66FD-ECEC-F2CD-A23D90A178DF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/DaddyGrab.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BabyDistance.cs">
     <Files>
       <File FileName="Assets/Scripts/Movement/PlayerCam2.cs" Line="24" Column="32" IsPinned="True" />
-      <File FileName="Assets/spawner.cs" Line="49" Column="1" IsPinned="True" />
-      <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" Line="299" Column="82" />
-      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" Line="51" Column="33" />
-      <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" Line="23" Column="27" />
-      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" Line="28" Column="32" />
+      <File FileName="Assets/spawner.cs" Line="42" Column="29" IsPinned="True" />
+      <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" />
+      <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
+      <File FileName="../../Downloads/Movement - Tutorial (Unity Project)/Assets/Scripts/Movement/PlayerCam.cs" />
+      <File FileName="Assets/Scripts/Movement/PlayerCam.cs" />
       <File FileName="Assets/_Scripts/GameManager.cs" />
       <File FileName="Assets/PlayerNetwork.cs" />
       <File FileName="Assets/GreenForest/PostProcessing/Editor/PropertyDrawers/MinDrawer.cs" />
-      <File FileName="Assets/CharacterSelect.cs" Line="1" Column="1" />
-      <File FileName="Assets/PasswordNetworkManager.cs" Line="36" Column="6" />
-      <File FileName="Library/PackageCache/com.unity.netcode.gameobjects@1.5.2/Runtime/Core/NetworkManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/CharacterSelect.cs" />
+      <File FileName="Assets/PasswordNetworkManager.cs" />
+      <File FileName="Library/PackageCache/com.unity.netcode.gameobjects@1.5.2/Runtime/Core/NetworkManager.cs" />
       <File FileName="Assets/_Scripts/ClientPrediction.cs" />
       <File FileName="Assets/_Scripts/Client.cs" />
       <File FileName="Assets/_Scripts/Server.cs" />
       <File FileName="Assets/Scripts/Movement/MoveCamera.cs" />
       <File FileName="Assets/_Scripts/DaddyGrab.cs" Line="39" Column="76" />
-      <File FileName="Assets/GameLogic.cs" Line="24" Column="34" />
+      <File FileName="Assets/GameLogic.cs" />
+      <File FileName="Assets/YourIP.cs" Line="19" Column="35" />
+      <File FileName="Assets/BabyDistance.cs" Line="22" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AvoidDad2Project" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="_Scripts" expanded="True">
-                <Node name="DaddyGrab.cs" selected="True" />
-              </Node>
+              <Node name="_Scripts" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="Movement" expanded="True" />
               </Node>
+              <Node name="BabyDistance.cs" selected="True" />
             </Node>
           </Node>
         </State>

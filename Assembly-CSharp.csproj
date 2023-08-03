@@ -93,6 +93,7 @@
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/DepthOfFieldModel.cs" />
     <Compile Include="Assets/Scripts/Movement/PlayerMovement.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/BloomModel.cs" />
+    <Compile Include="Assets/YourIP.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Utils/ColorGradingCurve.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/DitheringModel.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/FogComponent.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/AmbientOcclusionComponent.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/EyeAdaptationModel.cs" />
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Scripts/U10PS_DissolveOverTime.cs" />
+    <Compile Include="Assets/BabyDistance.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/GrainModel.cs" />
     <Compile Include="Assets/_Scripts/AdvPlayerMovement.cs" />
     <Compile Include="Assets/_Scripts/Client.cs" />
