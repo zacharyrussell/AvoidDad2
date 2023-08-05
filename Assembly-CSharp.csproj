@@ -73,6 +73,7 @@
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/ChromaticAberrationComponent.cs" />
     <Compile Include="Assets/Scripts/Addons/MovingTarget.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/UserLutModel.cs" />
+    <Compile Include="Assets/LobbyLogic.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/VignetteModel.cs" />
     <Compile Include="Assets/PasswordNetworkManager.cs" />
     <Compile Include="Assets/GameLogic.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/DitheringModel.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/FogComponent.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Attributes/TrackballGroupAttribute.cs" />
+    <Compile Include="Assets/teamSelect.cs" />
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Scripts/U10PS_ExampleReview.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/PostProcessingBehaviour.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Utilities/CustomMotionTexture/ExampleWheelController.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Assets/_Scripts/UnitStamina.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/UserLutComponent.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/GrainComponent.cs" />
+    <Compile Include="Assets/ListHandler.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/PostProcessingComponent.cs" />
     <Compile Include="Assets/CharacterSelect.cs" />
   </ItemGroup>

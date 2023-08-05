@@ -21,6 +21,7 @@ public class PasswordNetworkManager : MonoBehaviour
     [SerializeField] private GameObject baby;
     [SerializeField] private GameObject dad;
     [SerializeField] private GameObject gameOver;
+    [SerializeField] private GameObject lobby;
 
     public GameObject menu;
 
@@ -110,6 +111,12 @@ public class PasswordNetworkManager : MonoBehaviour
 
             menu.SetActive(false);
             passwordEntryUI.SetActive(false);
+            //lobby.SetActive(true);
+
+            //if (NetworkManager.Singleton.IsClient) {
+            //    print("CCC");
+            //    FindAnyObjectByType<LobbyLogic>().spawnLobbyPlayer(); }
+
             leaveButton.SetActive(true);
         }
        
@@ -121,6 +128,7 @@ public class PasswordNetworkManager : MonoBehaviour
         {
             menu.SetActive(true);
             leaveButton.SetActive(false);
+            lobby.SetActive(true);
             passwordEntryUI.SetActive(true);
             gameOver.SetActive(false);
         }
@@ -135,8 +143,6 @@ public class PasswordNetworkManager : MonoBehaviour
     }
     private void ApprovalCheck(NetworkManager.ConnectionApprovalRequest request, NetworkManager.ConnectionApprovalResponse response)
     {
-
-
         // The client identifier to be authenticated
         var clientId = request.ClientNetworkId;
         if (clientId == NetworkManager.Singleton.LocalClientId)

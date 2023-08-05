@@ -10,9 +10,36 @@ public class spawner : NetworkBehaviour
     [SerializeField] GameObject dad;
     [SerializeField] TMP_Text SelectedCharacter;
     public List<GameObject> Players;
-    public int charId; 
+    public int charId;
+    [SerializeField] GameObject UI_Lobby;
+
+
+    public void spawnPlayers(ulong clientId, string selectedCharacter)
+    {
+        if (IsClient)
+        {
+            
+            if (selectedCharacter == "Dad")
+            {
+                print("DAD SPAWNING");
+                charId = 1;
+                serverSpawnServerRpc(NetworkManager.Singleton.LocalClientId, 1);
+            }
+            else
+            {
+                print("Baby SPAWNING");
+                charId = 0;
+                serverSpawnServerRpc(NetworkManager.Singleton.LocalClientId, 0);
+            }
+            UI_Lobby.SetActive(false);
+        }
+    }
+
+
+
     public override void OnNetworkSpawn()
     {
+        return;
         if (IsClient)
         {
             if(SelectedCharacter.text == "Dad")
