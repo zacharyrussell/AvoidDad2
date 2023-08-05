@@ -9,6 +9,7 @@ using System.Text;
 using Unity.Networking.Transport;
 using Unity.Netcode.Transports.UTP;
 using UnityEngine.SceneManagement;
+using System.Net;
 
 public class PasswordNetworkManager : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class PasswordNetworkManager : MonoBehaviour
     [SerializeField] private GameObject dad;
     [SerializeField] private GameObject gameOver;
     [SerializeField] private GameObject lobby;
+
+
 
     public GameObject menu;
 
@@ -89,6 +92,8 @@ public class PasswordNetworkManager : MonoBehaviour
 
     private void Start()
     {
+        var host = Dns.GetHostEntry(Dns.GetHostName());
+        Transport.ConnectionData.Address = host.AddressList[0].ToString();
         NetworkManager.Singleton.OnServerStarted += HandleServerStarted;
         NetworkManager.Singleton.OnClientConnectedCallback += HandleClientConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback += HandleClientDisconnected;        

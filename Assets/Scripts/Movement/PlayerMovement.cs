@@ -37,6 +37,8 @@ public class PlayerMovement : NetworkBehaviour
     //Rigidbody rb;
     [SerializeField] GameObject _camera;
     [SerializeField] GameObject Baby;
+    [SerializeField] GameObject playerHud;
+
 
 
     //[HideInInspector] public TextMeshProUGUI text_speed;
@@ -45,8 +47,16 @@ public class PlayerMovement : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         print(IsOwner);
-        if (!IsOwner) return;
+
+
+
+        if (!IsOwner)
+        {
+            playerHud.SetActive(false);
+            return;
+        }
         Cursor.lockState = CursorLockMode.Locked;
+        playerHud.SetActive(true);
         Baby.SetActive(false);
         _camera.SetActive(true);
     }

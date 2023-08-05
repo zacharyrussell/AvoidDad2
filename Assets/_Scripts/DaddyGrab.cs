@@ -13,6 +13,7 @@ public class DaddyGrab : NetworkBehaviour
     private LineRenderer laserLine;                                        // Reference to the LineRenderer component which will display our laserline
     private float nextFire;                                                // Float to store the time the player will be allowed to fire again, after firing
     bool gamePadConnected = false;
+    public float bulletSpreadAmount = 2f;
 
     void Start()
     {
@@ -36,7 +37,10 @@ public class DaddyGrab : NetworkBehaviour
         
         RaycastHit hit;
         Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
-        if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, 2f) && hit.collider.gameObject.CompareTag("Baby") )
+        Vector3 fwd = fpsCam.transform.forward;
+        //fwd = fwd + fpsCam.transform.TransformDirection(new Vector3(Random.Range(-bulletSpreadAmount, bulletSpreadAmount), Random.Range(-bulletSpreadAmount, bulletSpreadAmount)));
+
+        if (Physics.Raycast(rayOrigin, fwd, out hit, 2f) && hit.collider.gameObject.CompareTag("Baby") )
         {
 
             if (!hit.collider.gameObject.CompareTag("Baby")) { return; }
@@ -67,32 +71,6 @@ public class DaddyGrab : NetworkBehaviour
         {
             grab.SetActive(false);
         }
-        // Check if the player has pressed the fire button and if enough time has elapsed since they last fired
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Debug.Log("FIRING");
-        //    // Create a vector at the center of our camera's viewport
-        //    //Vector3 rayOrigin = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
 
-        //    // Declare a raycast hit to store information about what our raycast has hit
-        //    //RaycastHit hit;
-
-
-        //    // Check if our raycast has hit anything
-        //    if (Physics.Raycast(rayOrigin, fpsCam.transform.forward, out hit, weaponRange))
-        //    {
-        //        // Set the end position for our laser line 
-        //        //laserLine.SetPosition(1, hit.point);
-        //        if (hit.collider.gameObject.CompareTag("Baby"))
-        //        {
-        //            print("BABY CAPTURED");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        // If we did not hit anything, set the end of the line to a position directly in front of the camera at the distance of weaponRange
-        //        //laserLine.SetPosition(1, rayOrigin + (fpsCam.transform.forward * weaponRange));
-        //    }
-        //}
     }
 }

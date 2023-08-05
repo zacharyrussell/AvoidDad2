@@ -322,6 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 5939994938771762419}
   Baby: {fileID: 1961819382788458922}
+  playerHud: {fileID: 8815428232811642220}
 --- !u!114 &1174030715968539669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,7 +978,7 @@ GameObject:
   - component: {fileID: 4162375789696338002}
   m_Layer: 5
   m_Name: HUD
-  m_TagString: Untagged
+  m_TagString: Hud
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

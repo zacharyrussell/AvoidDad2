@@ -79,7 +79,7 @@ public class ListHandler : NetworkBehaviour
     private NetworkVariable<Vector3> displayPosition = new(writePerm: NetworkVariableWritePermission.Owner);
 
     
-    public void AddLobbyPlayer(ulong clientId, string name)
+    public void AddLobbyPlayer(ulong clientId, string name, string selectedCharacter)
     {
         print("AAAA");
         
@@ -89,8 +89,16 @@ public class ListHandler : NetworkBehaviour
         undecidedV.y = tmpyValue;
         babyListV.y = tmpyValue;
         dadListV.y = tmpyValue;
-        displayGo = Instantiate(displayPrefab, undecidedV, Quaternion.identity);
+
+        Vector3 newPosition = undecidedV;
+        if (selectedCharacter == "Undecided") newPosition = undecidedV;
+        if (selectedCharacter == "Baby") newPosition = babyListV;
+        if (selectedCharacter == "Dad") newPosition = dadListV;
+
+        displayGo = Instantiate(displayPrefab, newPosition, Quaternion.identity);
         displayGo.transform.SetParent(this.transform);
+
+        
 
         LobbyPlayer tmpPlayer = new LobbyPlayer(clientId, name, "Undecided", displayGo, tmpyValue);
         TMP_Text textChild = displayGo.transform.GetChild(0).gameObject.GetComponent<TMP_Text>();

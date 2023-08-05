@@ -16,7 +16,7 @@ public class YourIP : MonoBehaviour
     {
         var host = Dns.GetHostEntry(Dns.GetHostName());
         print(host.AddressList[0]);
-        text.text = "Your IP: " + host.AddressList[0].ToString();
+        text.text = host.AddressList[0].ToString();
     }
 
     // Update is called once per frame

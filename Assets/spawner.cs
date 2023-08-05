@@ -12,6 +12,7 @@ public class spawner : NetworkBehaviour
     public List<GameObject> Players;
     public int charId;
     [SerializeField] GameObject UI_Lobby;
+    [SerializeField] GameObject menuCam;
 
 
     public void spawnPlayers(ulong clientId, string selectedCharacter)
@@ -32,6 +33,7 @@ public class spawner : NetworkBehaviour
                 serverSpawnServerRpc(NetworkManager.Singleton.LocalClientId, 0);
             }
             UI_Lobby.SetActive(false);
+            menuCam.SetActive(false);
         }
     }
 

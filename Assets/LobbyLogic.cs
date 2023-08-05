@@ -11,7 +11,8 @@ public class LobbyLogic : NetworkBehaviour
     private List<LobbyPlayer> lobbyPlayers;
     [SerializeField] GameObject lobbyUI;
     [SerializeField] TMP_InputField nameField;
-
+    [SerializeField] GameObject joinOverlay;
+    [SerializeField] GameObject hostOverlay;
 
     private string PlayerName = "DefaultName";
 
@@ -128,7 +129,7 @@ public class LobbyLogic : NetworkBehaviour
 
         foreach(LobbyPlayer p in lobbyPlayers)
         {
-            SpawnLobbyPlayerClientRpc(p.clientID, p.name);
+            SpawnLobbyPlayerClientRpc(p.clientID, p.name, p.selectedCharacter);
         }
         //foreach(ulong id in playersToSpawn)
         //{
@@ -138,15 +139,38 @@ public class LobbyLogic : NetworkBehaviour
     }
 
     [ClientRpc]
-    public void SpawnLobbyPlayerClientRpc(ulong clientId, string Pname)
+    public void SpawnLobbyPlayerClientRpc(ulong clientId, string Pname, string selectedCharacter)
     {
         foreach (ulong id in clientList)
         {
             if (id == clientId) return;
         }
 
-        FindAnyObjectByType<ListHandler>().AddLobbyPlayer(clientId, Pname);
+        FindAnyObjectByType<ListHandler>().AddLobbyPlayer(clientId, Pname, selectedCharacter);
         clientList.Add(clientId);
-        lobbyPlayers.Add(new LobbyPlayer(clientId, "Undecided", Pname));
+        lobbyPlayers.Add(new LobbyPlayer(clientId, selectedCharacter, Pname));
     }
+
+
+
+    public void enableJoinOverlay()
+    {
+        joinOverlay.SetActive(true);
+
+    }
+    public void disableJoinOverlay()
+    {
+        joinOverlay.SetActive(false);
+    }
+
+    public void enableHostOverlay()
+    {
+        hostOverlay.SetActive(true);
+
+    }
+    public void disableHostOverlay()
+    {
+        hostOverlay.SetActive(false);
+    }
+
 }

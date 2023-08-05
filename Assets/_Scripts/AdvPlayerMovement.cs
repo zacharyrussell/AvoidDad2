@@ -83,7 +83,10 @@ public class AdvPlayerMovement : NetworkBehaviour
 
     private void Update()
     {
-
+        if (!IsOwner)
+        {
+            return;
+        }
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + -0.7f, whatIsGround);
         MyInput();

@@ -127,6 +127,7 @@
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/ScreenSpaceReflectionComponent.cs" />
     <Compile Include="Assets/Ultimate 10 Plus Shaders/Shaders/Plexus/Plexus.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/PostProcessingProfile.cs" />
+    <Compile Include="Assets/JoinOverlay.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Attributes/GetSetAttribute.cs" />
     <Compile Include="Assets/_Scripts/UnitStamina.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Components/UserLutComponent.cs" />
