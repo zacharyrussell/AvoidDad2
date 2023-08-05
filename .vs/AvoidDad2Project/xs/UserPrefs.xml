@@ -1,24 +1,25 @@
 ﻿<Properties StartupConfiguration="{A7DDC838-66FD-ECEC-F2CD-A23D90A178DF}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/JoinOverlay.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/YourIP.cs">
     <Files>
       <File FileName="Assets/teamSelect.cs" Line="25" Column="4" />
-      <File FileName="Assets/spawner.cs" />
+      <File FileName="Assets/spawner.cs" Line="36" Column="38" />
       <File FileName="Assets/Scripts/Movement/PlayerCam2.cs" />
       <File FileName="Assets/_Scripts/Server.cs" />
       <File FileName="Assets/Scripts/Movement/MoveCamera.cs" />
-      <File FileName="Assets/_Scripts/DaddyGrab.cs" Line="40" Column="48" />
+      <File FileName="Assets/_Scripts/DaddyGrab.cs" Line="41" Column="11" />
       <File FileName="Assets/GameLogic.cs" />
-      <File FileName="Assets/YourIP.cs" Line="21" Column="1" />
+      <File FileName="Assets/YourIP.cs" Line="5" Column="37" />
       <File FileName="Assets/BabyDistance.cs" />
       <File FileName="Assets/ListHandler.cs" Line="92" Column="1" />
       <File FileName="Assets/PlayerNetwork.cs" />
-      <File FileName="Assets/PasswordNetworkManager.cs" />
-      <File FileName="Assets/LobbyLogic.cs" Line="26" Column="42" />
+      <File FileName="Assets/PasswordNetworkManager.cs" Line="95" Column="56" />
+      <File FileName="Assets/LobbyLogic.cs" Line="15" Column="37" />
       <File FileName="Assets/LobbyLogicNetVar.cs" />
       <File FileName="Assets/Scripts/Movement/PlayerMovement.cs" />
       <File FileName="Assets/_Scripts/StaminaBar.cs" />
       <File FileName="Assets/_Scripts/AdvPlayerMovement.cs" />
-      <File FileName="Assets/JoinOverlay.cs" Line="17" Column="10" />
+      <File FileName="Assets/JoinOverlay.cs" Line="23" Column="6" />
+      <File FileName="Assets/_Scripts/Other/Movement/NetworkSpawn.cs" Line="37" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,10 +27,7 @@
           <Node name="AvoidDad2Project" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="_Scripts" expanded="True" />
-              <Node name="Scripts" expanded="True">
-                <Node name="Movement" expanded="True" />
-              </Node>
-              <Node name="JoinOverlay.cs" selected="True" />
+              <Node name="YourIP.cs" selected="True" />
             </Node>
           </Node>
         </State>
