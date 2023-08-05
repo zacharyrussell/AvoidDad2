@@ -40,11 +40,11 @@ public struct LobbyPlayer
         this.lobbyDisplay = go;
         this.yValue = yValue;
     }
-    public LobbyPlayer(ulong p, string v1) : this()
+    public LobbyPlayer(ulong p, string v1, string v2) : this()
     {
         this.clientID = p;
         this.selectedCharacter = v1;
-
+        this.name = v2;
     }
 }
 

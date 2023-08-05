@@ -62,6 +62,7 @@
     <Compile Include="Assets/_Scripts/DaddyGrab.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Utils/RenderTextureFactory.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets/LobbyLogicNetVar.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/AntialiasingModel.cs" />
     <Compile Include="Assets/Scripts/Movement/PlayerCam.cs" />
     <Compile Include="Assets/GreenForest/PostProcessing/Runtime/Models/FogModel.cs" />

@@ -2,13 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using TMPro;
 
 public class LobbyLogic : NetworkBehaviour
 {
 
     private List<ulong> clientList;
     private List<LobbyPlayer> lobbyPlayers;
-    [SerializeField] GameObject lobbyUI; 
+    [SerializeField] GameObject lobbyUI;
+    [SerializeField] TMP_InputField nameField;
+
+
+    private string PlayerName = "DefaultName";
+
+
+
+    public void updateName()
+    {
+        PlayerName = nameField.text;
+    }
+
 
     public override void OnNetworkSpawn()
     {
@@ -17,7 +30,7 @@ public class LobbyLogic : NetworkBehaviour
         if (IsClient)
         {
             lobbyUI.SetActive(true);
-            SpawnLobbyPlayerServerRpc(NetworkManager.Singleton.LocalClientId);
+            SpawnLobbyPlayerServerRpc(NetworkManager.Singleton.LocalClientId, PlayerName);
             //FindAnyObjectByType<ListHandler>().AddLobbyPlayer(NetworkManager.Singleton.LocalClientId, "Placeholder");
         }
     }
@@ -105,28 +118,35 @@ public class LobbyLogic : NetworkBehaviour
 
 
     [ServerRpc(RequireOwnership = false)]
-    public void SpawnLobbyPlayerServerRpc(ulong clientId)
+    public void SpawnLobbyPlayerServerRpc(ulong clientId, string Pname)
     {
         List<ulong> playersToSpawn = new(NetworkManager.Singleton.ConnectedClientsIds);
-        lobbyPlayers.Add(new LobbyPlayer(clientId, "Undecided"));
+        lobbyPlayers.Add(new LobbyPlayer(clientId, "Undecided", Pname));
         //Sync joined players
-        foreach(ulong id in playersToSpawn)
+
+
+
+        foreach(LobbyPlayer p in lobbyPlayers)
         {
-            SpawnLobbyPlayerClientRpc(id);
+            SpawnLobbyPlayerClientRpc(p.clientID, p.name);
         }
+        //foreach(ulong id in playersToSpawn)
+        //{
+        //    SpawnLobbyPlayerClientRpc(id, Pname);
+        //}
 
     }
 
     [ClientRpc]
-    public void SpawnLobbyPlayerClientRpc(ulong clientId)
+    public void SpawnLobbyPlayerClientRpc(ulong clientId, string Pname)
     {
         foreach (ulong id in clientList)
         {
             if (id == clientId) return;
         }
 
-        FindAnyObjectByType<ListHandler>().AddLobbyPlayer(clientId, "Placeholder");
+        FindAnyObjectByType<ListHandler>().AddLobbyPlayer(clientId, Pname);
         clientList.Add(clientId);
-        lobbyPlayers.Add(new LobbyPlayer(clientId, "Undecided"));
+        lobbyPlayers.Add(new LobbyPlayer(clientId, "Undecided", Pname));
     }
 }
