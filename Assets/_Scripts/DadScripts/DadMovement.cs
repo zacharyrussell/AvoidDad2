@@ -21,9 +21,6 @@ public class DadMovement : NetworkBehaviour
     public float airMultiplier;
     bool readyToJump;
     bool readyToDive;
-    bool isSprinting;
-    bool isMoving;
-
     bool readyToFastFall;
 
     [Header("Stamina")]
@@ -72,6 +69,7 @@ public class DadMovement : NetworkBehaviour
     PlayerState lastState;
     PlayerState playerState;
     float setGroundDrag;
+    bool diveInCooldown;
 
 
     private void Start()
@@ -105,7 +103,10 @@ public class DadMovement : NetworkBehaviour
         {
             rb.drag = groundDrag;
             readyToFastFall = true;
-            if (!readyToDive){Invoke(nameof(ResetDive), diveCooldown);}
+            if (!readyToDive && !diveInCooldown)
+            {   
+                diveInCooldown = true;
+                Invoke(nameof(ResetDive), diveCooldown);}
         }
 
         else
@@ -132,14 +133,6 @@ public class DadMovement : NetworkBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            isSprinting = true;
-        }
-        else
-        {
-            isSprinting = false;
-        }
 
         if (Input.GetKey(KeyCode.Q) && readyToFastFall && !grounded)
         {
@@ -217,20 +210,24 @@ public class DadMovement : NetworkBehaviour
 
     void StepClimb()
     {
-        Vector3[] angles = {Vector3.forward, Vector3.back, Vector3.left, Vector3.right, 
-                            new Vector3(1.5f, 0f, 1f), new Vector3(-1.5f, 0f,1f), new Vector3(1.5f, 0f, -1f), new Vector3(-1.5f,0f,-1f)};
-        for (int i = 0; i < angles.Length; i++)
+        if (playerState != PlayerState.Idle)
         {
-        if (Physics.Raycast(stepLower.transform.position, transform.TransformDirection(angles[i]), 0.1f, whatIsGround))
-        {
-            print("lower step detected");
-            if (!Physics.Raycast(stepUpper.transform.position, transform.TransformDirection(angles[i]), 0.2f, whatIsGround))
+            Vector3[] angles = {Vector3.forward, Vector3.back, Vector3.left, Vector3.right, 
+                                new Vector3(1.5f, 0f, 1f), new Vector3(-1.5f, 0f,1f), new Vector3(1.5f, 0f, -1f), new Vector3(-1.5f,0f,-1f)};
+            for (int i = 0; i < angles.Length; i++)
             {
-                rb.AddForce(transform.up * 90, ForceMode.Force);
-                break;
-                print("stepping up!");
+                if (Physics.Raycast(stepLower.transform.position, transform.TransformDirection(angles[i]), 0.1f, whatIsGround))
+                {
+                    print("lower step detected");
+                    if (!Physics.Raycast(stepUpper.transform.position, transform.TransformDirection(angles[i]), 0.2f, whatIsGround))
+                    {
+                        rb.AddForce(transform.up * 90, ForceMode.Force);
+                        break;
+                        print("stepping up!");
+                    }
+                }
             }
-        }}
+        }
 
     }
 
@@ -283,6 +280,7 @@ public class DadMovement : NetworkBehaviour
     {
         groundDrag = setGroundDrag;
         readyToDive = true;
+        diveInCooldown = false;
     }
 
     private void PlayerUseStamina(float staminaAmount)
