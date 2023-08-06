@@ -61,14 +61,6 @@ public class DadMovement : NetworkBehaviour
     public UnitStamina _playerStamina = new UnitStamina(100f, 100f, 30f, false);
     [HideInInspector] public TextMeshProUGUI text_speed;
     bool gamePadConnected = false;
-    enum PlayerState
-    {
-        Idle,
-        Walking,
-        Sprinting,
-        Jumping,
-        Diving
-    }
     PlayerState lastState;
     PlayerState playerState;
     float setGroundDrag;
@@ -91,7 +83,7 @@ public class DadMovement : NetworkBehaviour
 
     private void Update()
     {
-
+        if (!IsOwner) return;
         // ground check
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + -0.7f, whatIsGround);
         MyInput();
@@ -146,7 +138,12 @@ public class DadMovement : NetworkBehaviour
             readyToFastFall = false;
             FastFall();
         }
-
+        if (Input.GetKey(KeyCode.E) && readyToDive)
+        {
+            readyToDive = false;
+            groundDrag = 2;
+            Dive();
+        }
     }
 
     private void ControllerControl()
@@ -171,7 +168,6 @@ public class DadMovement : NetworkBehaviour
             readyToDive = false;
             groundDrag = 2;
             Dive();
-            
         }
     }
 
@@ -328,12 +324,31 @@ public class DadMovement : NetworkBehaviour
             else { playerState = PlayerState.Idle; }
     }
 
+
+
+    public PlayerState GetPlayerState()
+    {
+        return playerState;
+    }
+
+    public void SetPlayerState(PlayerState netRecievedState)
+    {
+        playerState = netRecievedState;
+        AnimatePlayer();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (playerState != PlayerState.Diving) return;
+
+        if (collision.gameObject.CompareTag("Baby"))
+        {
+            FindAnyObjectByType<DaddyGrab>().BabyCapturedServerRpc();
+        }
+    }
+
     private void AnimatePlayer()
     {
-        if (!IsOwner)
-        {
-            return;
-        }
         if (lastState != playerState)
         {
             _animator.SetBool("isIdle", false);

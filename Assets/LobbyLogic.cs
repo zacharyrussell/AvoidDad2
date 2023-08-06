@@ -40,7 +40,6 @@ public class LobbyLogic : NetworkBehaviour
 
     public void startGame()
     {
-        print("CLicked button");
         startGameServerRpc();
     }
 
@@ -55,10 +54,8 @@ public class LobbyLogic : NetworkBehaviour
     [ClientRpc]
     public void startGameClientRpc()
     {
-        print("In client RPC");
         for (int i = 0; i < lobbyPlayers.Count; i++)
         {
-            print("AA");
             if (lobbyPlayers[i].clientID == NetworkManager.Singleton.LocalClientId)
             {
                 print(lobbyPlayers[i].selectedCharacter);
@@ -75,7 +72,6 @@ public class LobbyLogic : NetworkBehaviour
     public void updatePosition(ulong clientId, string selectedCharacter)
     {
         updatePositionServerRpc(clientId, selectedCharacter);
-        print("Updating");
     }
 
 
@@ -110,7 +106,6 @@ public class LobbyLogic : NetworkBehaviour
             }
         }
         if (clientId == NetworkManager.Singleton.LocalClientId) return;
-        print("Updating client RPC");
         FindAnyObjectByType<ListHandler>().updateListCS(clientId, selectedCharacter);
     }
 
@@ -125,12 +120,15 @@ public class LobbyLogic : NetworkBehaviour
         lobbyPlayers.Add(new LobbyPlayer(clientId, "Undecided", Pname));
         //Sync joined players
 
-
-
-        foreach(LobbyPlayer p in lobbyPlayers)
+        for(int i = 0; i< lobbyPlayers.Count; i++)
         {
-            SpawnLobbyPlayerClientRpc(p.clientID, p.name, p.selectedCharacter);
+            SpawnLobbyPlayerClientRpc(lobbyPlayers[i].clientID, lobbyPlayers[i].name, lobbyPlayers[i].selectedCharacter);
         }
+
+        //foreach(LobbyPlayer p in lobbyPlayers)
+        //{
+        //    SpawnLobbyPlayerClientRpc(p.clientID, p.name, p.selectedCharacter);
+        //}
         //foreach(ulong id in playersToSpawn)
         //{
         //    SpawnLobbyPlayerClientRpc(id, Pname);

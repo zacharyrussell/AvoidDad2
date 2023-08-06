@@ -5,8 +5,21 @@ using TMPro;
 using Unity.Netcode;
 using UnityEngine.InputSystem;
 
+
+public enum PlayerState
+{
+    Idle,
+    Walking,
+    Sprinting,
+    Jumping,
+    AirDashing,
+    Diving
+}
+
+
 public class BabyMovement : NetworkBehaviour
 {
+
     [Header("Movement")]
     public float moveSpeed;
     public float sprintSpeed;
@@ -57,14 +70,14 @@ public class BabyMovement : NetworkBehaviour
     public UnitStamina _playerStamina = new UnitStamina(100f, 100f, 30f, false);
     [HideInInspector] public TextMeshProUGUI text_speed;
     bool gamePadConnected = false;
-    enum PlayerState
-    {
-        Idle,
-        Walking,
-        Sprinting,
-        Jumping,
-        AirDashing
-    }
+    //enum PlayerState
+    //{
+    //    Idle,
+    //    Walking,
+    //    Sprinting,
+    //    Jumping,
+    //    AirDashing
+    //}
     PlayerState lastState;
     PlayerState playerState;
 
@@ -320,12 +333,20 @@ public class BabyMovement : NetworkBehaviour
         
     }
 
+
+    public PlayerState GetPlayerState()
+    {
+        return playerState;
+    }
+    public void SetPlayerState(PlayerState netRecievedState)
+    {
+        playerState = netRecievedState;
+        AnimatePlayer();
+    }
+
+
     private void AnimatePlayer()
     {
-        if (!IsOwner)
-        {
-            return;
-        }
         if (lastState != playerState)
         {
             _baby.SetBool("isIdle", false);
@@ -355,6 +376,8 @@ public class BabyMovement : NetworkBehaviour
                 case PlayerState.AirDashing:
                 _baby.SetBool("isAirDashing", true);
                 break;
+
+                
             }
 
             lastState = playerState;

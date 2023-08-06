@@ -2,29 +2,29 @@ Unity Editor version:    2022.3.5f1 (9674261d40ee)
 Branch:                  2022.3/release
 Build type:              Release
 Batch mode:              YES
-macOS version:           Version 12.3.1 (Build 21E258)
-Darwin version:          21.4.0
+macOS version:           Version 12.6.5 (Build 21G531)
+Darwin version:          21.6.0
 Architecture:            x86_64
 Running under Rosetta:   NO
-Available memory:        16384 MB
+Available memory:        65536 MB
 Using pre-set license
 Pro License: YES
 
 COMMAND LINE ARGUMENTS:
-/Users/mattrussell/Documents/Unity/2022.3.5f1/Unity.app/Contents/MacOS/Unity
+/Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker4
 -projectPath
-/Users/mattrussell/Documents/GitHub/AvoidDad2
+/Users/zach/gamedev/AvoidDad2Project
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-58557
-Successfully changed project path to: /Users/mattrussell/Documents/GitHub/AvoidDad2
-/Users/mattrussell/Documents/GitHub/AvoidDad2
+50297
+Successfully changed project path to: /Users/zach/gamedev/AvoidDad2Project
+/Users/zach/gamedev/AvoidDad2Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -56,64 +56,68 @@ Successfully changed project path to: /Users/mattrussell/Documents/GitHub/AvoidD
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [4786284032] Host "[IP] 192.168.86.57 [Port] 0 [Flags] 2 [Guid] 719080183 [EditorId] 719080183 [Version] 1048832 [Id] OSXEditor(0,matts-mbp.lan) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [4521534976] Host "[IP] 192.168.86.58 [Port] 0 [Flags] 2 [Guid] 3676633741 [EditorId] 3676633741 [Version] 1048832 [Id] OSXEditor(0,computerguy.lan) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [4786284032] Host "[IP] 192.168.86.57 [Port] 0 [Flags] 2 [Guid] 719080183 [EditorId] 719080183 [Version] 1048832 [Id] OSXEditor(0,matts-mbp.lan) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [4521534976] Host "[IP] 192.168.86.58 [Port] 0 [Flags] 2 [Guid] 3676633741 [EditorId] 3676633741 [Version] 1048832 [Id] OSXEditor(0,computerguy.lan) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 28.89 ms, found 2 plugins.
+2023-08-05 15:51:30.350 Unity[7253:131892] apply_selection_policy_once: prefer use of removable GPUs (via com.unity3d.UnityEditor5.x:GPUSelectionPolicy->preferRemovable)
+Refreshing native plugins compatible for Editor in 5.11 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.5f1 (9674261d40ee)
-[Subsystems] Discovering subsystems at path /Users/mattrussell/Documents/Unity/2022.3.5f1/Unity.app/Contents/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path /Users/mattrussell/Documents/GitHub/AvoidDad2/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/zach/gamedev/AvoidDad2Project/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
-Color LCD preferred device: AMD Radeon Pro 5500M (high power)
-Metal devices available: 2
-0: AMD Radeon Pro 5500M (high power)
-1: Intel(R) UHD Graphics 630 (low power)
-Using device AMD Radeon Pro 5500M (high power)
-Initializing Metal device caps: AMD Radeon Pro 5500M
+HP X27 preferred device: AMD Radeon RX 5700 XT (high power, removable)
+Metal devices available: 3
+0: AMD Radeon RX 5700 XT (high power, removable)
+1: AMD Radeon Pro 5500M (high power)
+2: Intel(R) UHD Graphics 630 (low power)
+Using device AMD Radeon RX 5700 XT (high power, removable)
+Initializing Metal device caps: AMD Radeon RX 5700 XT
 Initialize mono
-Mono path[0] = '/Users/mattrussell/Documents/Unity/2022.3.5f1/Unity.app/Contents/Managed'
-Mono path[1] = '/Users/mattrussell/Documents/Unity/2022.3.5f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
-Mono config path = '/Users/mattrussell/Documents/Unity/2022.3.5f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56045
+Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56253
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: /Users/mattrussell/Documents/Unity/2022.3.5f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.001646 seconds.
-- Loaded All Assemblies, in  0.704 seconds
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.5f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001667 seconds.
+- Loaded All Assemblies, in  0.431 seconds
+Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.418 seconds
-Domain Reload Profiling: 1123ms
-	BeginReloadAssembly (165ms)
+- Finished resetting the current domain, in  0.444 seconds
+Domain Reload Profiling: 875ms
+	BeginReloadAssembly (90ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (72ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (88ms)
-	LoadAllAssembliesAndSetupDomain (356ms)
-		LoadAssemblies (167ms)
+	RebuildCommonClasses (57ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (202ms)
+		LoadAssemblies (89ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (350ms)
-			TypeCache.Refresh (349ms)
-				TypeCache.ScanAssembly (329ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (200ms)
+			TypeCache.Refresh (199ms)
+				TypeCache.ScanAssembly (184ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (419ms)
+	FinalizeReload (444ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (315ms)
+		SetupLoadedEditorAssemblies (365ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (12ms)
-			SetLoadedEditorAssemblies (11ms)
+			InitializePlatformSupportModulesInManaged (10ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (215ms)
-			ProcessInitializeOnLoadMethodAttributes (72ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (228ms)
+			ProcessInitializeOnLoadMethodAttributes (116ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -122,498 +126,446 @@ Domain Reload Profiling: 1123ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.368 seconds
-Refreshing native plugins compatible for Editor in 2.43 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.956 seconds
+Refreshing native plugins compatible for Editor in 2.07 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.034 seconds
-Domain Reload Profiling: 2402ms
-	BeginReloadAssembly (190ms)
+- Finished resetting the current domain, in  0.804 seconds
+Domain Reload Profiling: 1760ms
+	BeginReloadAssembly (146ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (44ms)
-	RebuildCommonClasses (65ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (62ms)
-	LoadAllAssembliesAndSetupDomain (1030ms)
-		LoadAssemblies (510ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (691ms)
+		LoadAssemblies (271ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (596ms)
-			TypeCache.Refresh (524ms)
-				TypeCache.ScanAssembly (500ms)
-			ScanForSourceGeneratedMonoScriptInfo (63ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (1035ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (760ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (118ms)
-			ProcessInitializeOnLoadAttributes (503ms)
-			ProcessInitializeOnLoadMethodAttributes (126ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launching external process: /Users/mattrussell/Documents/Unity/2022.3.5f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.08 seconds
-Refreshing native plugins compatible for Editor in 2.65 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5575 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 93 unused Assets / (2.0 MB). Loaded Objects now: 6021.
-Memory consumption went from 360.8 MB to 358.8 MB.
-Total: 6.143549 ms (FindLiveObjects: 0.469983 ms CreateObjectMapping: 0.502342 ms MarkObjects: 4.451304 ms  DeleteObjects: 0.718781 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/U10PS_DissolveOverTime.cs: e34ea1bf655cc20fc77949af9532d9f7 -> 66caa74640416ee04525af8778d8d3b1
-  custom:scripting/monoscript/fileName/ControllerSetup.cs: 20018873cdedd5b84fec38e344bdf5ca -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/Controller Setup.cs: 20018873cdedd5b84fec38e344bdf5ca -> 
-  custom:scripting/monoscript/fileName/VignetteModel.cs: b92a1f7de463ae0d0c59fa1b6f9d506a -> ab6733272f937ac0155aab47b4a8e58e
-  custom:scripting/monoscript/fileName/EyeAdaptationModel.cs: 25d26a36dada93b1b2182a00de2d3aac -> 5bcc92c7d981d480ed07d6af7dd1a959
-  custom:scripting/monoscript/fileName/U10PS_ExampleReview.cs: 908c11b86fe56fefbc1809a345584056 -> 002d888be0455ed883d8d0f2a955c41c
-  custom:scripting/monoscript/fileName/PostProcessingModelEditorAttribute.cs: dd2576a9b3f38213fb34bc4dc8a27584 -> 84467b1ef2082fe26f00bdedc34db836
-  custom:scripting/monoscript/fileName/ReflectionUtils.cs: a4c8b546159cd16c85e13a9070cfeda1 -> 14b4c7d2cdf78d9b158d00fb2c3c24b2
-  custom:scripting/monoscript/fileName/MinDrawer.cs: 3de01253c2c8384a6c4ca82ee0f4fc32 -> f0b5a34ad7cefeba48c04a270d4abfc9
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/ExampleWheelController.cs: ca3df6cadacaf0e2a2bc4f308b7f5b04 -> 9600d370c57ff0da5766666ba4365a29
-  custom:scripting/monoscript/fileName/GetSetAttribute.cs: 89c54ced99d1e8bbfc5eff57db83e40a -> b786c1938e0c0f5ecaf463807c2d7653
-  custom:scripting/monoscript/fileName/FxStyles.cs: 311bf5a9face900c06fdb074cde27d06 -> 82e974921467cb55809ecad82f38f7ca
-  custom:scripting/monoscript/fileName/PostProcessingContext.cs: 66f95a94a6de509bf5df35d6b861e53c -> be8a0bc1565c6324b1fd40a33f66279b
-  custom:scripting/monoscript/fileName/PostProcessingInspector.cs: c89c58bbeee953fd13ff328c3e97391e -> b617eaa0b6e3e752eaf9e9a89203dc82
-  custom:scripting/monoscript/fileName/AntialiasingModelEditor.cs: 3f8e1511e133ac99a698e7d290452e3c -> 0f2b80733b1449af72ed38ee469e2a30
-  custom:scripting/monoscript/fileName/PlayerCam.cs: 82696d846a4cdba80209be1b63d46000 -> 2baf756480d7a3732f43ac30c19a37b9
-  custom:scripting/monoscript/fileName/EyeAdaptationComponent.cs: 0f82fe58a1ca9b397a85be1794cdeb49 -> 0cb2aaf8cdc20c0baee2205168cbc73c
-  custom:scripting/monoscript/fileName/FxaaComponent.cs: 1f16ace2f9731b0e10a50fcff8a83af2 -> 9d1fd3efb92e1fef6fd176ee45003f08
-  custom:scripting/monoscript/fileName/MoveCamera.cs: f5a771052b8a8f340c21c21b6192457d -> 403cfc71311e35fc8267157fec6d962f
-  custom:scripting/monoscript/fileName/DitheringModel.cs: 4228775df20f9295aa8f1330779e3d26 -> fa99c50231ddc7ca26b5d6c9a68b4b31
-  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:scripting/monoscript/fileName/TrackballAttribute.cs: 5b521ccbbadd8b930f511dcc1d992ea2 -> b6bebfc375cd859fcabdbe7a117a8817
-  custom:scripting/monoscript/fileName/U10PS_SnowOverTime.cs: 3a1f89d06d07f9a162e35f080d8672fd -> 16e0b4791ac9fbe3b7eeba7460e116ed
-  custom:scripting/monoscript/fileName/PostProcessingProfile.cs: 79e2f7ed0fdbaf9cdb3f5a24202371c2 -> e94a21971fab43a541218a4f91e0403c
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsModel.cs: 2b0b345540e01174ed705f013a685e20 -> 4a09809f2c0ed6cca27229b06ce1d289
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderTextureFactory.cs: a0a8b8236ce6bc8322b0798980c5e20b -> b11bc916a1a88ed67d986ee69a536511
-  custom:scripting/monoscript/fileName/FogModelEditor.cs: 0b3daea88b63674b7be87751d142c906 -> 64b75506b78e4411272a1d25aff5dcfd
-  custom:scripting/monoscript/fileName/EyeAdaptationModelEditor.cs: 1f034ad0edfe533fb21e2322cf3e0951 -> ee1343b3ceaceb2c63bf272baf871cbd
-  custom:scripting/monoscript/fileName/Plexus.cs: c82de4d74fbefa8250ba7871d94dd6f7 -> 3da4f7b252e62b7348ca2a759f6a3dfa
-  custom:scripting/monoscript/fileName/DefaultPostFxModelEditor.cs: c914e619577de7a80cd5844fb631cac8 -> e4be4b1d308934dee3a6a91920dc1b3d
-  custom:scripting/monoscript/fileName/RebindActionUIEditor.cs: 6e6c415f0b893401d86053c46be682f3 -> 
-  custom:scripting/monoscript/fileName/PostProcessingFactory.cs: 521816c0d5969265aebda2f8d92074a4 -> f4e35cbabcf5e0add8e963bb8ab175b2
-  custom:scripting/monoscript/fileName/DepthOfFieldModel.cs: 6c13dda42db05683b19591699540dcb8 -> ab243c09a4b44fd7a53f73051db01cbc
-  custom:scripting/monoscript/fileName/Client.cs: c62f797ebb61525b8791149af20b367f -> 8620ff0e26cd7d0d77641e6ae0d5a328
-  custom:scripting/monoscript/fileName/ColorGradingModel.cs: 458d69b477d9ee2b971131e7358720d2 -> d1c2ef15f5e9e4868052777d51361b40
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionModel.cs: fb693426e2251b4d27ee41adc7b17f8a -> 507d9c80d381478e1c14f5bfe34012ae
-  custom:scripting/monoscript/fileName/TrackballGroupAttribute.cs: b3fa1c5010d7ab45ac7d24c58b3793b7 -> 6d071733b141a3fb3360b110560ed1cc
-  custom:scripting/monoscript/fileName/DitheringModelEditor.cs: b9df2b49adc747c12ae92a32ede0d556 -> 98ce08c54d480e2032b7e03104c8332a
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/monoscript/fileName/BloomComponent.cs: 8000c43cdcd921bef55e57e7e81de364 -> 755f611bb4d32a54d162192a9fc6dd86
-  custom:scripting/monoscript/fileName/MotionBlurComponent.cs: b48f1b1bc5e2180a8721706fa85c1741 -> 6cf5a99eefa473d803af3e64f841a0a6
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsComponent.cs: cdb5b1085bf224971807d7f56b6fe725 -> 1b8215a7f6eae55c3fc6a97379498db3
-  custom:scripting/monoscript/fileName/BabyMovement.cs: ec4b3dc9a0e799ba366d5909e516b505 -> 69b0a7a6b8b24706e492c089ce1bdb05
-  custom:scripting/monoscript/fileName/MotionBlurModelEditor.cs: 7762b6606db8bd0d1fbe3d375b8c6904 -> 214d77ab75c222685eecaec8c6aed3b0
-  custom:scripting/monoscript/fileName/ChromaticAberrationEditor.cs: 0a0163937dc71e7798c4db762cdf216a -> 155914d835bfd177c18b8c90db68e385
-  custom:scripting/monoscript/fileName/GamepadIconsExample.cs: 979d62b1c95bcd4718489aeac5c4da7c -> 
-  custom:scripting/monoscript/fileName/AmbientOcclusionModel.cs: 57a221bbca8b47b2a41079682944ea65 -> ac26bcd19cab8c88e9b65cb75ee1c356
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:scripting/monoscript/fileName/U10PS_MouseRotation.cs: 236f2e4234d63d9f35eb7de654491d32 -> 1ab37e77af43f15a876312a5b15dbe74
-  custom:scripting/monoscript/fileName/PlayerCam2.cs: 0b30ebe2e034f8cc9f2aa81601080929 -> 36869efcf585d8cfe942cc4f14b1f970
-  custom:scripting/monoscript/fileName/AmbientOcclusionComponent.cs: 2dccbbb1fc8afed35b26a5f3cd6ced43 -> ae5a7089fb97a5a97a8f11138ce7c9d2
-  custom:scripting/monoscript/fileName/GraphicsUtils.cs: 8c0a60fe3f3ed17924104a69970d992c -> f7df21c2acb52bb931f99c0a424b6be0
-  custom:scripting/monoscript/fileName/DepthOfFieldComponent.cs: d40bdcdc405bbc6ffc9e0e4074e618df -> b0afd8f8844e3e4017df6130c14d0dfc
-  custom:scripting/monoscript/fileName/ColorGradingModelEditor.cs: c8870c83c33b183a36c030871ff7144f -> d8393f813d799206976f65da1ab781ef
-  custom:scripting/monoscript/fileName/ColorGradingCurve.cs: 62c9c1432cfdcad5cddf4928fd142ebc -> e1e989893ee31e7801923212f0468312
-  custom:scripting/monoscript/fileName/RebindActionUI.cs: d036e8e1c9a6f56b0e0a0c3c109be220 -> 
-  custom:scripting/monoscript/fileName/AntialiasingModel.cs: 494d71d449e31ac862da49b2add216d1 -> 325b0130eaada61513aeac7b8c97a9d7
-  custom:scripting/monoscript/fileName/ChromaticAberrationModel.cs: 335fca1c37d732e27893a49ea31be09e -> 3f166f1ecbc6f39ed2f6b10cbc5b4ba4
-  custom:scripting/monoscript/fileName/Server.cs: 054602cf30190d8e25eb64e1f9678c0e -> c75d654e6ff3087c4eaa97d0fdab2ab6
-  custom:scripting/monoscript/fileName/AmbientOcclusionModelEditor.cs: 36c107c7832ce60beb9b0e53f283e926 -> 99a92cb6d65b3a11adad7b285256ee66
-  custom:scripting/monoscript/fileName/TaaComponent.cs: ed7e43ad821d7e8ba9c9732328542278 -> 7c343e97072a6712c3a2b01e75fdb7fa
-  custom:scripting/monoscript/fileName/DadMovement.cs: 53c90e293f66ec56b3e89b7007a189cb -> 5f1bbebe7ff8eede0edb67eb1bded971
-  custom:scripting/monoscript/fileName/ParadeMonitor.cs: 90cdf5ed92f20dfdd50cb0473ac9baf7 -> cae69c77ac3a6bd03788e390b0793dce
-  custom:scripting/monoscript/fileName/ClientPrediction.cs: 54f063cbf435458726496e4e36ea8983 -> 6f02724b08ab719c27b719d4f5681fae
-  custom:scripting/monoscript/fileName/BloomModelEditor.cs: 06035630788ccb9e698c0b54e175cb39 -> 82667d6cbb2e9deab73f43bddd4cb3ad
-  custom:scripting/monoscript/fileName/HistogramMonitor.cs: 50e6a954baaa958d8d3a28f762b89498 -> bb7cb63ac41d6c37c8e749994e51cd98
-  custom:scripting/monoscript/fileName/PostProcessingBehaviourEditor.cs: 596408f07e2a363624278e7e378b8078 -> 066ae7bf767a73228aa8d9e772743d81
-  custom:scripting/monoscript/fileName/PostProcessingModel.cs: 273a7d5920d09b44f5144463a6c06822 -> 2f64caba6afa59bc78865f13b6f9065d
-  custom:scripting/monoscript/fileName/EditorGUIHelper.cs: ea02d383c0fd761a54772f058e26fb88 -> 4a11466b474c4ddf8b0e969391a97509
-  custom:scripting/monoscript/fileName/DepthOfFieldModelEditor.cs: c32259adb6b7cdbd143e98e6fef0e87d -> c9db63f1a070d3e8ad359080de3aa855
-  custom:scripting/monoscript/fileName/ChromaticAberrationComponent.cs: a2aa238c1d87b5868e929305cf7e9a69 -> cda95994b71ba23d0c0f0fe0f241aab9
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:scripting/monoscript/fileName/activateOnPlay.cs: f4352b89f8806384e522d2aa938b6854 -> b3ec4e3494e1662ef0ec31be2aecf5cd
-  custom:scripting/monoscript/fileName/TrackballGroupDrawer.cs: 84fd749b1e63f623479f6de6fa4ebadb -> 36f1db6df3ee9bb6e23950968f1fa293
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsEditor.cs: 874a703bc694fc53fc29b042397d6fd8 -> 315fb7cf21f3f53a30e4961d88029d42
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionComponent.cs: d6d899bef40dd0d777bb6a9a7a65b0ea -> 79ad7ef64576d014e73a91b6c3af0688
-  custom:scripting/monoscript/fileName/MovingTarget.cs: 85dfa9b3f207ad8bbc5284c95539caac -> d5f0d6c52766d767d049bbd5fc9a2b65
-  custom:scripting/monoscript/fileName/GetSetDrawer.cs: fd8ccbac44457df656146fc1aaaac41f -> 19bba8dcf0569bc9ff3f3eb8733c91d8
-  custom:scripting/monoscript/fileName/MotionBlurModel.cs: 57a056884a6b94653e08d34bab775577 -> 4e24ef1d444a45a9e0056ed75c7c7eb7
-  custom:scripting/monoscript/fileName/PostProcessingComponent.cs: 2dfe7725fae842a07aaf23c2d4a996b9 -> 85236d6b86a55b2f46a14367ab625049
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/PostProcessingModelEditor.cs: ab2a8b00197c3830a2f1c57bed3ebc24 -> 5454250018fe1f45305c6e2bbb867603
-  custom:scripting/monoscript/fileName/PostProcessingMonitor.cs: 8f06d44398cdfc907cb9349b8f4935d4 -> d1e07bd8dc8b5f2f5124f2514220156a
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/MaterialFactory.cs: 63d7306d98b32527de60f41d24b42127 -> 39b00f1518fc675c62e508eb4bdec486
-  custom:scripting/monoscript/fileName/VectorscopeMonitor.cs: 4bc03971dab100bd6524e02c0160c20d -> 66a737bc4bbc432cc628d48064aabe6a
-  custom:scripting/monoscript/fileName/ColorGradingComponent.cs: 848edcce18462e32fea7d20f09e7d92b -> fc28099e3cee649b1f5925a07b57ea96
-  custom:scripting/monoscript/fileName/UserLutModel.cs: e25f1576a4a30edca2e5773438bfa6ee -> ce559ad59b29fc066f37249281afd441
-  custom:scripting/monoscript/fileName/EditorResources.cs: 51249a9d860d4e9c7770950c9170228f -> 9f83d1aedff2fa20e157243f0913ea0e
-  custom:scripting/monoscript/fileName/MinAttribute.cs: e47f1c1a544f27e247abb0d56d05095b -> 04a8151f79cf6bc016fa377feaf7e471
-  custom:scripting/monoscript/fileName/GrainComponent.cs: 3a0f02ac4a475f93f8036ee5c6d66d3c -> fae958f48caa0fab6bcf7f9c48b915e1
-  custom:scripting/monoscript/fileName/UserLutModelEditor.cs: c80bf57b759908d5e1ffcebb4a99a006 -> 342104b23101d3bfd45391c0769a34cf
-  custom:scripting/monoscript/fileName/FogComponent.cs: e616ae76e4468e3f26024a8740c26e80 -> 2dfe6d4c859eabd11b82ff8fc7d7ad22
-  custom:scripting/monoscript/fileName/DaddyGrab.cs: cef1cdd7b990fae7b4ab3ee8641e7b09 -> 564391168844020a0bbc08cf602c4cac
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionModelEditor.cs: 433fea2e8ddd4e93c53b7be0035f3751 -> 7f4dd9c1675fb2cce031c62e047539ef
-  custom:scripting/monoscript/fileName/RebindSaveLoad.cs: 9f163c44d068774dd336257fe5bbccd4 -> 
-  custom:scripting/monoscript/fileName/VignetteComponent.cs: a571817716b8e8e8e5109ea597f53d2b -> 293deb083808f71d2d18d818ef588272
-  custom:scripting/monoscript/fileName/FogModel.cs: a1d2aac64b09c41ee80cfce39850efc8 -> c4cd4da1fb97c7abf787083602f52bf5
-  custom:scripting/monoscript/fileName/WaveformMonitor.cs: eec1a342c2e6489d4110afe3aebf2233 -> 7ff9d3c5406022a31de781b40395893d
-  custom:scripting/monoscript/fileName/PlayerMovement.cs: 581a21bdf6dee81ef80ec844b7707b43 -> 
-  custom:scripting/monoscript/fileName/DitheringComponent.cs: c9ba4ad60f26a3b6b83bad733eea3323 -> 83d905897534466960141b85361bb6b4
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/AdvPlayerMovement.cs: e2134c5e2804abffb4d55fc752c14641 -> 
-  custom:scripting/monoscript/fileName/NetworkButtons.cs: d15d4d7f96f8ab46a7e8c38f8adf6d9b -> bbe0f899598c32164be5a6a7249432b6
-  custom:scripting/monoscript/fileName/VignetteModelEditor.cs: 31e8c15955bdea33977b494bba0dfc3d -> e544ec17c4d10dc7a011d82b890e61d2
-  custom:scripting/monoscript/fileName/UserLutComponent.cs: 5cb1932ead2652e7f1a9e7718c6ab4b9 -> 944143ce5f543a40c92ecea777f35ae4
-  custom:scripting/monoscript/fileName/CurveEditor.cs: 0456736c3a1c7955e62897c0245558cf -> 1cbed521cedae78619aa83bc25a705be
-  custom:scripting/monoscript/fileName/PostProcessingBehaviour.cs: ac0e09f08bd4b8a92c2ef33707439c43 -> b0fbf7f67aeee9a6f7db03386dbc8c1e
-  custom:scripting/monoscript/fileName/GrainModelEditor.cs: 6fd34d3d8c38c6c14c686cb950fee8e5 -> fc1fd3126ff1a32e5c9c0211f235c203
-  custom:scripting/monoscript/fileName/BloomModel.cs: 1b6eb5f5bda121b56a00554bbac9293d -> b4ba3e478c2698eb99512ead9d78d360
-  custom:scripting/monoscript/fileName/GrainModel.cs: 78631bfdf3658b2db12ff9a63fea49d9 -> ce4589c9bbcb55f8f632b6617dc5d1f0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.096 seconds
-Refreshing native plugins compatible for Editor in 1.97 ms, found 2 plugins.
-Native extension for OSXStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.178 seconds
-Domain Reload Profiling: 3275ms
-	BeginReloadAssembly (240ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (105ms)
-	RebuildCommonClasses (56ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (750ms)
-		LoadAssemblies (389ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (444ms)
-			TypeCache.Refresh (428ms)
-				TypeCache.ScanAssembly (406ms)
-			ScanForSourceGeneratedMonoScriptInfo (8ms)
+		AnalyzeDomain (478ms)
+			TypeCache.Refresh (424ms)
+				TypeCache.ScanAssembly (404ms)
+			ScanForSourceGeneratedMonoScriptInfo (48ms)
 			ResolveRequiredComponents (7ms)
-	FinalizeReload (2179ms)
+	FinalizeReload (804ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (894ms)
+		SetupLoadedEditorAssemblies (594ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (6ms)
 			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (80ms)
-			ProcessInitializeOnLoadAttributes (497ms)
-			ProcessInitializeOnLoadMethodAttributes (302ms)
-			AfterProcessingInitializeOnLoad (3ms)
-			EditorAssembliesLoaded (1ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (394ms)
+			ProcessInitializeOnLoadMethodAttributes (102ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Refreshing native plugins compatible for Editor in 2.09 ms, found 2 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.5f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.06 seconds
+Refreshing native plugins compatible for Editor in 2.72 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5469 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 64 unused Assets / (2.0 MB). Loaded Objects now: 6024.
-Memory consumption went from 337.5 MB to 335.5 MB.
-Total: 5.272568 ms (FindLiveObjects: 0.391656 ms CreateObjectMapping: 0.396131 ms MarkObjects: 4.039734 ms  DeleteObjects: 0.443731 ms)
+Unloading 5581 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 93 unused Assets / (2.0 MB). Loaded Objects now: 6024.
+Memory consumption went from 360.8 MB to 358.8 MB.
+Total: 8.919877 ms (FindLiveObjects: 0.540831 ms CreateObjectMapping: 0.522223 ms MarkObjects: 6.995977 ms  DeleteObjects: 0.859705 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/U10PS_DissolveOverTime.cs: e34ea1bf655cc20fc77949af9532d9f7 -> 66caa74640416ee04525af8778d8d3b1
-  custom:scripting/monoscript/fileName/ControllerSetup.cs: 20018873cdedd5b84fec38e344bdf5ca -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/Controller Setup.cs: 20018873cdedd5b84fec38e344bdf5ca -> 
-  custom:scripting/monoscript/fileName/VignetteModel.cs: b92a1f7de463ae0d0c59fa1b6f9d506a -> ab6733272f937ac0155aab47b4a8e58e
-  custom:scripting/monoscript/fileName/EyeAdaptationModel.cs: 25d26a36dada93b1b2182a00de2d3aac -> 5bcc92c7d981d480ed07d6af7dd1a959
-  custom:scripting/monoscript/fileName/U10PS_ExampleReview.cs: 908c11b86fe56fefbc1809a345584056 -> 002d888be0455ed883d8d0f2a955c41c
-  custom:scripting/monoscript/fileName/PostProcessingModelEditorAttribute.cs: dd2576a9b3f38213fb34bc4dc8a27584 -> 84467b1ef2082fe26f00bdedc34db836
-  custom:scripting/monoscript/fileName/ReflectionUtils.cs: a4c8b546159cd16c85e13a9070cfeda1 -> 14b4c7d2cdf78d9b158d00fb2c3c24b2
-  custom:scripting/monoscript/fileName/MinDrawer.cs: 3de01253c2c8384a6c4ca82ee0f4fc32 -> f0b5a34ad7cefeba48c04a270d4abfc9
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/ExampleWheelController.cs: ca3df6cadacaf0e2a2bc4f308b7f5b04 -> 9600d370c57ff0da5766666ba4365a29
-  custom:scripting/monoscript/fileName/GetSetAttribute.cs: 89c54ced99d1e8bbfc5eff57db83e40a -> b786c1938e0c0f5ecaf463807c2d7653
-  custom:scripting/monoscript/fileName/FxStyles.cs: 311bf5a9face900c06fdb074cde27d06 -> 82e974921467cb55809ecad82f38f7ca
-  custom:scripting/monoscript/fileName/PostProcessingContext.cs: 66f95a94a6de509bf5df35d6b861e53c -> be8a0bc1565c6324b1fd40a33f66279b
-  custom:scripting/monoscript/fileName/PostProcessingInspector.cs: c89c58bbeee953fd13ff328c3e97391e -> b617eaa0b6e3e752eaf9e9a89203dc82
-  custom:scripting/monoscript/fileName/AntialiasingModelEditor.cs: 3f8e1511e133ac99a698e7d290452e3c -> 0f2b80733b1449af72ed38ee469e2a30
-  custom:scripting/monoscript/fileName/PlayerCam.cs: 82696d846a4cdba80209be1b63d46000 -> 2baf756480d7a3732f43ac30c19a37b9
-  custom:scripting/monoscript/fileName/EyeAdaptationComponent.cs: 0f82fe58a1ca9b397a85be1794cdeb49 -> 0cb2aaf8cdc20c0baee2205168cbc73c
-  custom:scripting/monoscript/fileName/FxaaComponent.cs: 1f16ace2f9731b0e10a50fcff8a83af2 -> 9d1fd3efb92e1fef6fd176ee45003f08
-  custom:scripting/monoscript/fileName/MoveCamera.cs: f5a771052b8a8f340c21c21b6192457d -> 403cfc71311e35fc8267157fec6d962f
-  custom:scripting/monoscript/fileName/DitheringModel.cs: 4228775df20f9295aa8f1330779e3d26 -> fa99c50231ddc7ca26b5d6c9a68b4b31
   custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:scripting/monoscript/fileName/TrackballAttribute.cs: 5b521ccbbadd8b930f511dcc1d992ea2 -> b6bebfc375cd859fcabdbe7a117a8817
-  custom:scripting/monoscript/fileName/U10PS_SnowOverTime.cs: 3a1f89d06d07f9a162e35f080d8672fd -> 16e0b4791ac9fbe3b7eeba7460e116ed
-  custom:scripting/monoscript/fileName/PostProcessingProfile.cs: 79e2f7ed0fdbaf9cdb3f5a24202371c2 -> e94a21971fab43a541218a4f91e0403c
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsModel.cs: 2b0b345540e01174ed705f013a685e20 -> 4a09809f2c0ed6cca27229b06ce1d289
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderTextureFactory.cs: a0a8b8236ce6bc8322b0798980c5e20b -> b11bc916a1a88ed67d986ee69a536511
-  custom:scripting/monoscript/fileName/FogModelEditor.cs: 0b3daea88b63674b7be87751d142c906 -> 64b75506b78e4411272a1d25aff5dcfd
-  custom:scripting/monoscript/fileName/EyeAdaptationModelEditor.cs: 1f034ad0edfe533fb21e2322cf3e0951 -> ee1343b3ceaceb2c63bf272baf871cbd
-  custom:scripting/monoscript/fileName/Plexus.cs: c82de4d74fbefa8250ba7871d94dd6f7 -> 3da4f7b252e62b7348ca2a759f6a3dfa
-  custom:scripting/monoscript/fileName/DefaultPostFxModelEditor.cs: c914e619577de7a80cd5844fb631cac8 -> e4be4b1d308934dee3a6a91920dc1b3d
-  custom:scripting/monoscript/fileName/RebindActionUIEditor.cs: 6e6c415f0b893401d86053c46be682f3 -> 
-  custom:scripting/monoscript/fileName/PostProcessingFactory.cs: 521816c0d5969265aebda2f8d92074a4 -> f4e35cbabcf5e0add8e963bb8ab175b2
-  custom:scripting/monoscript/fileName/DepthOfFieldModel.cs: 6c13dda42db05683b19591699540dcb8 -> ab243c09a4b44fd7a53f73051db01cbc
-  custom:scripting/monoscript/fileName/Client.cs: c62f797ebb61525b8791149af20b367f -> 8620ff0e26cd7d0d77641e6ae0d5a328
-  custom:scripting/monoscript/fileName/ColorGradingModel.cs: 458d69b477d9ee2b971131e7358720d2 -> d1c2ef15f5e9e4868052777d51361b40
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionModel.cs: fb693426e2251b4d27ee41adc7b17f8a -> 507d9c80d381478e1c14f5bfe34012ae
-  custom:scripting/monoscript/fileName/TrackballGroupAttribute.cs: b3fa1c5010d7ab45ac7d24c58b3793b7 -> 6d071733b141a3fb3360b110560ed1cc
-  custom:scripting/monoscript/fileName/DitheringModelEditor.cs: b9df2b49adc747c12ae92a32ede0d556 -> 98ce08c54d480e2032b7e03104c8332a
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/monoscript/fileName/BloomComponent.cs: 8000c43cdcd921bef55e57e7e81de364 -> 755f611bb4d32a54d162192a9fc6dd86
-  custom:scripting/monoscript/fileName/MotionBlurComponent.cs: b48f1b1bc5e2180a8721706fa85c1741 -> 6cf5a99eefa473d803af3e64f841a0a6
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsComponent.cs: cdb5b1085bf224971807d7f56b6fe725 -> 1b8215a7f6eae55c3fc6a97379498db3
-  custom:scripting/monoscript/fileName/BabyMovement.cs: ec4b3dc9a0e799ba366d5909e516b505 -> 69b0a7a6b8b24706e492c089ce1bdb05
-  custom:scripting/monoscript/fileName/MotionBlurModelEditor.cs: 7762b6606db8bd0d1fbe3d375b8c6904 -> 214d77ab75c222685eecaec8c6aed3b0
-  custom:scripting/monoscript/fileName/ChromaticAberrationEditor.cs: 0a0163937dc71e7798c4db762cdf216a -> 155914d835bfd177c18b8c90db68e385
-  custom:scripting/monoscript/fileName/GamepadIconsExample.cs: 979d62b1c95bcd4718489aeac5c4da7c -> 
-  custom:scripting/monoscript/fileName/AmbientOcclusionModel.cs: 57a221bbca8b47b2a41079682944ea65 -> ac26bcd19cab8c88e9b65cb75ee1c356
   custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:scripting/monoscript/fileName/U10PS_MouseRotation.cs: 236f2e4234d63d9f35eb7de654491d32 -> 1ab37e77af43f15a876312a5b15dbe74
-  custom:scripting/monoscript/fileName/PlayerCam2.cs: 0b30ebe2e034f8cc9f2aa81601080929 -> 36869efcf585d8cfe942cc4f14b1f970
-  custom:scripting/monoscript/fileName/AmbientOcclusionComponent.cs: 2dccbbb1fc8afed35b26a5f3cd6ced43 -> ae5a7089fb97a5a97a8f11138ce7c9d2
-  custom:scripting/monoscript/fileName/GraphicsUtils.cs: 8c0a60fe3f3ed17924104a69970d992c -> f7df21c2acb52bb931f99c0a424b6be0
-  custom:scripting/monoscript/fileName/DepthOfFieldComponent.cs: d40bdcdc405bbc6ffc9e0e4074e618df -> b0afd8f8844e3e4017df6130c14d0dfc
-  custom:scripting/monoscript/fileName/ColorGradingModelEditor.cs: c8870c83c33b183a36c030871ff7144f -> d8393f813d799206976f65da1ab781ef
-  custom:scripting/monoscript/fileName/ColorGradingCurve.cs: 62c9c1432cfdcad5cddf4928fd142ebc -> e1e989893ee31e7801923212f0468312
-  custom:scripting/monoscript/fileName/RebindActionUI.cs: d036e8e1c9a6f56b0e0a0c3c109be220 -> 
-  custom:scripting/monoscript/fileName/AntialiasingModel.cs: 494d71d449e31ac862da49b2add216d1 -> 325b0130eaada61513aeac7b8c97a9d7
-  custom:scripting/monoscript/fileName/ChromaticAberrationModel.cs: 335fca1c37d732e27893a49ea31be09e -> 3f166f1ecbc6f39ed2f6b10cbc5b4ba4
-  custom:scripting/monoscript/fileName/Server.cs: 054602cf30190d8e25eb64e1f9678c0e -> c75d654e6ff3087c4eaa97d0fdab2ab6
-  custom:scripting/monoscript/fileName/AmbientOcclusionModelEditor.cs: 36c107c7832ce60beb9b0e53f283e926 -> 99a92cb6d65b3a11adad7b285256ee66
-  custom:scripting/monoscript/fileName/TaaComponent.cs: ed7e43ad821d7e8ba9c9732328542278 -> 7c343e97072a6712c3a2b01e75fdb7fa
-  custom:scripting/monoscript/fileName/DadMovement.cs: 53c90e293f66ec56b3e89b7007a189cb -> 5f1bbebe7ff8eede0edb67eb1bded971
-  custom:scripting/monoscript/fileName/ParadeMonitor.cs: 90cdf5ed92f20dfdd50cb0473ac9baf7 -> cae69c77ac3a6bd03788e390b0793dce
-  custom:scripting/monoscript/fileName/ClientPrediction.cs: 54f063cbf435458726496e4e36ea8983 -> 6f02724b08ab719c27b719d4f5681fae
-  custom:scripting/monoscript/fileName/BloomModelEditor.cs: 06035630788ccb9e698c0b54e175cb39 -> 82667d6cbb2e9deab73f43bddd4cb3ad
-  custom:scripting/monoscript/fileName/HistogramMonitor.cs: 50e6a954baaa958d8d3a28f762b89498 -> bb7cb63ac41d6c37c8e749994e51cd98
-  custom:scripting/monoscript/fileName/PostProcessingBehaviourEditor.cs: 596408f07e2a363624278e7e378b8078 -> 066ae7bf767a73228aa8d9e772743d81
-  custom:scripting/monoscript/fileName/PostProcessingModel.cs: 273a7d5920d09b44f5144463a6c06822 -> 2f64caba6afa59bc78865f13b6f9065d
-  custom:scripting/monoscript/fileName/EditorGUIHelper.cs: ea02d383c0fd761a54772f058e26fb88 -> 4a11466b474c4ddf8b0e969391a97509
-  custom:scripting/monoscript/fileName/DepthOfFieldModelEditor.cs: c32259adb6b7cdbd143e98e6fef0e87d -> c9db63f1a070d3e8ad359080de3aa855
-  custom:scripting/monoscript/fileName/ChromaticAberrationComponent.cs: a2aa238c1d87b5868e929305cf7e9a69 -> cda95994b71ba23d0c0f0fe0f241aab9
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:scripting/monoscript/fileName/activateOnPlay.cs: f4352b89f8806384e522d2aa938b6854 -> b3ec4e3494e1662ef0ec31be2aecf5cd
-  custom:scripting/monoscript/fileName/TrackballGroupDrawer.cs: 84fd749b1e63f623479f6de6fa4ebadb -> 36f1db6df3ee9bb6e23950968f1fa293
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsEditor.cs: 874a703bc694fc53fc29b042397d6fd8 -> 315fb7cf21f3f53a30e4961d88029d42
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionComponent.cs: d6d899bef40dd0d777bb6a9a7a65b0ea -> 79ad7ef64576d014e73a91b6c3af0688
-  custom:scripting/monoscript/fileName/MovingTarget.cs: 85dfa9b3f207ad8bbc5284c95539caac -> d5f0d6c52766d767d049bbd5fc9a2b65
-  custom:scripting/monoscript/fileName/GetSetDrawer.cs: fd8ccbac44457df656146fc1aaaac41f -> 19bba8dcf0569bc9ff3f3eb8733c91d8
-  custom:scripting/monoscript/fileName/MotionBlurModel.cs: 57a056884a6b94653e08d34bab775577 -> 4e24ef1d444a45a9e0056ed75c7c7eb7
-  custom:scripting/monoscript/fileName/PostProcessingComponent.cs: 2dfe7725fae842a07aaf23c2d4a996b9 -> 85236d6b86a55b2f46a14367ab625049
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/PostProcessingModelEditor.cs: ab2a8b00197c3830a2f1c57bed3ebc24 -> 5454250018fe1f45305c6e2bbb867603
-  custom:scripting/monoscript/fileName/PostProcessingMonitor.cs: 8f06d44398cdfc907cb9349b8f4935d4 -> d1e07bd8dc8b5f2f5124f2514220156a
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/MaterialFactory.cs: 63d7306d98b32527de60f41d24b42127 -> 39b00f1518fc675c62e508eb4bdec486
-  custom:scripting/monoscript/fileName/VectorscopeMonitor.cs: 4bc03971dab100bd6524e02c0160c20d -> 66a737bc4bbc432cc628d48064aabe6a
-  custom:scripting/monoscript/fileName/ColorGradingComponent.cs: 848edcce18462e32fea7d20f09e7d92b -> fc28099e3cee649b1f5925a07b57ea96
-  custom:scripting/monoscript/fileName/UserLutModel.cs: e25f1576a4a30edca2e5773438bfa6ee -> ce559ad59b29fc066f37249281afd441
-  custom:scripting/monoscript/fileName/EditorResources.cs: 51249a9d860d4e9c7770950c9170228f -> 9f83d1aedff2fa20e157243f0913ea0e
-  custom:scripting/monoscript/fileName/MinAttribute.cs: e47f1c1a544f27e247abb0d56d05095b -> 04a8151f79cf6bc016fa377feaf7e471
-  custom:scripting/monoscript/fileName/GrainComponent.cs: 3a0f02ac4a475f93f8036ee5c6d66d3c -> fae958f48caa0fab6bcf7f9c48b915e1
-  custom:scripting/monoscript/fileName/UserLutModelEditor.cs: c80bf57b759908d5e1ffcebb4a99a006 -> 342104b23101d3bfd45391c0769a34cf
-  custom:scripting/monoscript/fileName/FogComponent.cs: e616ae76e4468e3f26024a8740c26e80 -> 2dfe6d4c859eabd11b82ff8fc7d7ad22
-  custom:scripting/monoscript/fileName/DaddyGrab.cs: cef1cdd7b990fae7b4ab3ee8641e7b09 -> 564391168844020a0bbc08cf602c4cac
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionModelEditor.cs: 433fea2e8ddd4e93c53b7be0035f3751 -> 7f4dd9c1675fb2cce031c62e047539ef
-  custom:scripting/monoscript/fileName/RebindSaveLoad.cs: 9f163c44d068774dd336257fe5bbccd4 -> 
-  custom:scripting/monoscript/fileName/VignetteComponent.cs: a571817716b8e8e8e5109ea597f53d2b -> 293deb083808f71d2d18d818ef588272
-  custom:scripting/monoscript/fileName/FogModel.cs: a1d2aac64b09c41ee80cfce39850efc8 -> c4cd4da1fb97c7abf787083602f52bf5
-  custom:scripting/monoscript/fileName/WaveformMonitor.cs: eec1a342c2e6489d4110afe3aebf2233 -> 7ff9d3c5406022a31de781b40395893d
-  custom:scripting/monoscript/fileName/PlayerMovement.cs: 581a21bdf6dee81ef80ec844b7707b43 -> 
-  custom:scripting/monoscript/fileName/DitheringComponent.cs: c9ba4ad60f26a3b6b83bad733eea3323 -> 83d905897534466960141b85361bb6b4
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/AdvPlayerMovement.cs: e2134c5e2804abffb4d55fc752c14641 -> 
-  custom:scripting/monoscript/fileName/NetworkButtons.cs: d15d4d7f96f8ab46a7e8c38f8adf6d9b -> bbe0f899598c32164be5a6a7249432b6
-  custom:scripting/monoscript/fileName/VignetteModelEditor.cs: 31e8c15955bdea33977b494bba0dfc3d -> e544ec17c4d10dc7a011d82b890e61d2
-  custom:scripting/monoscript/fileName/UserLutComponent.cs: 5cb1932ead2652e7f1a9e7718c6ab4b9 -> 944143ce5f543a40c92ecea777f35ae4
-  custom:scripting/monoscript/fileName/CurveEditor.cs: 0456736c3a1c7955e62897c0245558cf -> 1cbed521cedae78619aa83bc25a705be
-  custom:scripting/monoscript/fileName/PostProcessingBehaviour.cs: ac0e09f08bd4b8a92c2ef33707439c43 -> b0fbf7f67aeee9a6f7db03386dbc8c1e
-  custom:scripting/monoscript/fileName/GrainModelEditor.cs: 6fd34d3d8c38c6c14c686cb950fee8e5 -> fc1fd3126ff1a32e5c9c0211f235c203
-  custom:scripting/monoscript/fileName/BloomModel.cs: 1b6eb5f5bda121b56a00554bbac9293d -> b4ba3e478c2698eb99512ead9d78d360
-  custom:scripting/monoscript/fileName/GrainModel.cs: 78631bfdf3658b2db12ff9a63fea49d9 -> ce4589c9bbcb55f8f632b6617dc5d1f0
+========================================================================
+Received Import Request.
+  Time since last request: 4696.663744 seconds.
+  path: Assets/Prefabs/DadTest.prefab
+  artifactKey: Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DadTest.prefab using Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9bfda6ec888fab1e84f05231ccecab8') in 0.289826 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 358
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.946 seconds
-Refreshing native plugins compatible for Editor in 2.00 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.868 seconds
+Refreshing native plugins compatible for Editor in 1.84 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.933 seconds
-Domain Reload Profiling: 1879ms
-	BeginReloadAssembly (200ms)
+- Finished resetting the current domain, in  1.010 seconds
+Domain Reload Profiling: 1878ms
+	BeginReloadAssembly (188ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (86ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (29ms)
-	LoadAllAssembliesAndSetupDomain (649ms)
-		LoadAssemblies (297ms)
+		CreateAndSetChildDomain (82ms)
+	RebuildCommonClasses (52ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (581ms)
+		LoadAssemblies (227ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (416ms)
-			TypeCache.Refresh (408ms)
-				TypeCache.ScanAssembly (392ms)
+		AnalyzeDomain (411ms)
+			TypeCache.Refresh (404ms)
+				TypeCache.ScanAssembly (387ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (933ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (1010ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (563ms)
+		SetupLoadedEditorAssemblies (614ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (8ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (86ms)
-			ProcessInitializeOnLoadAttributes (374ms)
-			ProcessInitializeOnLoadMethodAttributes (92ms)
+			BeforeProcessingInitializeOnLoad (90ms)
+			ProcessInitializeOnLoadAttributes (405ms)
+			ProcessInitializeOnLoadMethodAttributes (104ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
-Refreshing native plugins compatible for Editor in 1.96 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 2.14 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5469 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 64 unused Assets / (2.0 MB). Loaded Objects now: 6027.
-Memory consumption went from 337.8 MB to 335.8 MB.
-Total: 5.459122 ms (FindLiveObjects: 0.496993 ms CreateObjectMapping: 0.494063 ms MarkObjects: 3.948141 ms  DeleteObjects: 0.518806 ms)
+Unloading 5474 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 68 unused Assets / (2.0 MB). Loaded Objects now: 6038.
+Memory consumption went from 341.0 MB to 339.0 MB.
+Total: 5.494657 ms (FindLiveObjects: 0.460542 ms CreateObjectMapping: 0.478605 ms MarkObjects: 4.055949 ms  DeleteObjects: 0.498589 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:scripting/monoscript/fileName/U10PS_DissolveOverTime.cs: e34ea1bf655cc20fc77949af9532d9f7 -> 66caa74640416ee04525af8778d8d3b1
-  custom:scripting/monoscript/fileName/ControllerSetup.cs: 20018873cdedd5b84fec38e344bdf5ca -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:scripting/monoscript/fileName/Controller Setup.cs: 20018873cdedd5b84fec38e344bdf5ca -> 
-  custom:scripting/monoscript/fileName/VignetteModel.cs: b92a1f7de463ae0d0c59fa1b6f9d506a -> ab6733272f937ac0155aab47b4a8e58e
-  custom:scripting/monoscript/fileName/EyeAdaptationModel.cs: 25d26a36dada93b1b2182a00de2d3aac -> 5bcc92c7d981d480ed07d6af7dd1a959
-  custom:scripting/monoscript/fileName/U10PS_ExampleReview.cs: 908c11b86fe56fefbc1809a345584056 -> 002d888be0455ed883d8d0f2a955c41c
-  custom:scripting/monoscript/fileName/PostProcessingModelEditorAttribute.cs: dd2576a9b3f38213fb34bc4dc8a27584 -> 84467b1ef2082fe26f00bdedc34db836
-  custom:scripting/monoscript/fileName/ReflectionUtils.cs: a4c8b546159cd16c85e13a9070cfeda1 -> 14b4c7d2cdf78d9b158d00fb2c3c24b2
-  custom:scripting/monoscript/fileName/MinDrawer.cs: 3de01253c2c8384a6c4ca82ee0f4fc32 -> f0b5a34ad7cefeba48c04a270d4abfc9
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:scripting/monoscript/fileName/ExampleWheelController.cs: ca3df6cadacaf0e2a2bc4f308b7f5b04 -> 9600d370c57ff0da5766666ba4365a29
-  custom:scripting/monoscript/fileName/GetSetAttribute.cs: 89c54ced99d1e8bbfc5eff57db83e40a -> b786c1938e0c0f5ecaf463807c2d7653
-  custom:scripting/monoscript/fileName/FxStyles.cs: 311bf5a9face900c06fdb074cde27d06 -> 82e974921467cb55809ecad82f38f7ca
-  custom:scripting/monoscript/fileName/PostProcessingContext.cs: 66f95a94a6de509bf5df35d6b861e53c -> be8a0bc1565c6324b1fd40a33f66279b
-  custom:scripting/monoscript/fileName/PostProcessingInspector.cs: c89c58bbeee953fd13ff328c3e97391e -> b617eaa0b6e3e752eaf9e9a89203dc82
-  custom:scripting/monoscript/fileName/AntialiasingModelEditor.cs: 3f8e1511e133ac99a698e7d290452e3c -> 0f2b80733b1449af72ed38ee469e2a30
-  custom:scripting/monoscript/fileName/PlayerCam.cs: 82696d846a4cdba80209be1b63d46000 -> 2baf756480d7a3732f43ac30c19a37b9
-  custom:scripting/monoscript/fileName/EyeAdaptationComponent.cs: 0f82fe58a1ca9b397a85be1794cdeb49 -> 0cb2aaf8cdc20c0baee2205168cbc73c
-  custom:scripting/monoscript/fileName/FxaaComponent.cs: 1f16ace2f9731b0e10a50fcff8a83af2 -> 9d1fd3efb92e1fef6fd176ee45003f08
-  custom:scripting/monoscript/fileName/MoveCamera.cs: f5a771052b8a8f340c21c21b6192457d -> 403cfc71311e35fc8267157fec6d962f
-  custom:scripting/monoscript/fileName/DitheringModel.cs: 4228775df20f9295aa8f1330779e3d26 -> fa99c50231ddc7ca26b5d6c9a68b4b31
   custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
-  custom:scripting/monoscript/fileName/TrackballAttribute.cs: 5b521ccbbadd8b930f511dcc1d992ea2 -> b6bebfc375cd859fcabdbe7a117a8817
-  custom:scripting/monoscript/fileName/U10PS_SnowOverTime.cs: 3a1f89d06d07f9a162e35f080d8672fd -> 16e0b4791ac9fbe3b7eeba7460e116ed
-  custom:scripting/monoscript/fileName/PostProcessingProfile.cs: 79e2f7ed0fdbaf9cdb3f5a24202371c2 -> e94a21971fab43a541218a4f91e0403c
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsModel.cs: 2b0b345540e01174ed705f013a685e20 -> 4a09809f2c0ed6cca27229b06ce1d289
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/RenderTextureFactory.cs: a0a8b8236ce6bc8322b0798980c5e20b -> b11bc916a1a88ed67d986ee69a536511
-  custom:scripting/monoscript/fileName/FogModelEditor.cs: 0b3daea88b63674b7be87751d142c906 -> 64b75506b78e4411272a1d25aff5dcfd
-  custom:scripting/monoscript/fileName/EyeAdaptationModelEditor.cs: 1f034ad0edfe533fb21e2322cf3e0951 -> ee1343b3ceaceb2c63bf272baf871cbd
-  custom:scripting/monoscript/fileName/Plexus.cs: c82de4d74fbefa8250ba7871d94dd6f7 -> 3da4f7b252e62b7348ca2a759f6a3dfa
-  custom:scripting/monoscript/fileName/DefaultPostFxModelEditor.cs: c914e619577de7a80cd5844fb631cac8 -> e4be4b1d308934dee3a6a91920dc1b3d
-  custom:scripting/monoscript/fileName/RebindActionUIEditor.cs: 6e6c415f0b893401d86053c46be682f3 -> 
-  custom:scripting/monoscript/fileName/PostProcessingFactory.cs: 521816c0d5969265aebda2f8d92074a4 -> f4e35cbabcf5e0add8e963bb8ab175b2
-  custom:scripting/monoscript/fileName/DepthOfFieldModel.cs: 6c13dda42db05683b19591699540dcb8 -> ab243c09a4b44fd7a53f73051db01cbc
-  custom:scripting/monoscript/fileName/Client.cs: c62f797ebb61525b8791149af20b367f -> 8620ff0e26cd7d0d77641e6ae0d5a328
-  custom:scripting/monoscript/fileName/ColorGradingModel.cs: 458d69b477d9ee2b971131e7358720d2 -> d1c2ef15f5e9e4868052777d51361b40
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionModel.cs: fb693426e2251b4d27ee41adc7b17f8a -> 507d9c80d381478e1c14f5bfe34012ae
-  custom:scripting/monoscript/fileName/TrackballGroupAttribute.cs: b3fa1c5010d7ab45ac7d24c58b3793b7 -> 6d071733b141a3fb3360b110560ed1cc
-  custom:scripting/monoscript/fileName/DitheringModelEditor.cs: b9df2b49adc747c12ae92a32ede0d556 -> 98ce08c54d480e2032b7e03104c8332a
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:scripting/monoscript/fileName/BloomComponent.cs: 8000c43cdcd921bef55e57e7e81de364 -> 755f611bb4d32a54d162192a9fc6dd86
-  custom:scripting/monoscript/fileName/MotionBlurComponent.cs: b48f1b1bc5e2180a8721706fa85c1741 -> 6cf5a99eefa473d803af3e64f841a0a6
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsComponent.cs: cdb5b1085bf224971807d7f56b6fe725 -> 1b8215a7f6eae55c3fc6a97379498db3
-  custom:scripting/monoscript/fileName/BabyMovement.cs: ec4b3dc9a0e799ba366d5909e516b505 -> 69b0a7a6b8b24706e492c089ce1bdb05
-  custom:scripting/monoscript/fileName/MotionBlurModelEditor.cs: 7762b6606db8bd0d1fbe3d375b8c6904 -> 214d77ab75c222685eecaec8c6aed3b0
-  custom:scripting/monoscript/fileName/ChromaticAberrationEditor.cs: 0a0163937dc71e7798c4db762cdf216a -> 155914d835bfd177c18b8c90db68e385
-  custom:scripting/monoscript/fileName/GamepadIconsExample.cs: 979d62b1c95bcd4718489aeac5c4da7c -> 
-  custom:scripting/monoscript/fileName/AmbientOcclusionModel.cs: 57a221bbca8b47b2a41079682944ea65 -> ac26bcd19cab8c88e9b65cb75ee1c356
   custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:scripting/monoscript/fileName/U10PS_MouseRotation.cs: 236f2e4234d63d9f35eb7de654491d32 -> 1ab37e77af43f15a876312a5b15dbe74
-  custom:scripting/monoscript/fileName/PlayerCam2.cs: 0b30ebe2e034f8cc9f2aa81601080929 -> 36869efcf585d8cfe942cc4f14b1f970
-  custom:scripting/monoscript/fileName/AmbientOcclusionComponent.cs: 2dccbbb1fc8afed35b26a5f3cd6ced43 -> ae5a7089fb97a5a97a8f11138ce7c9d2
-  custom:scripting/monoscript/fileName/GraphicsUtils.cs: 8c0a60fe3f3ed17924104a69970d992c -> f7df21c2acb52bb931f99c0a424b6be0
-  custom:scripting/monoscript/fileName/DepthOfFieldComponent.cs: d40bdcdc405bbc6ffc9e0e4074e618df -> b0afd8f8844e3e4017df6130c14d0dfc
-  custom:scripting/monoscript/fileName/ColorGradingModelEditor.cs: c8870c83c33b183a36c030871ff7144f -> d8393f813d799206976f65da1ab781ef
-  custom:scripting/monoscript/fileName/ColorGradingCurve.cs: 62c9c1432cfdcad5cddf4928fd142ebc -> e1e989893ee31e7801923212f0468312
-  custom:scripting/monoscript/fileName/RebindActionUI.cs: d036e8e1c9a6f56b0e0a0c3c109be220 -> 
-  custom:scripting/monoscript/fileName/AntialiasingModel.cs: 494d71d449e31ac862da49b2add216d1 -> 325b0130eaada61513aeac7b8c97a9d7
-  custom:scripting/monoscript/fileName/ChromaticAberrationModel.cs: 335fca1c37d732e27893a49ea31be09e -> 3f166f1ecbc6f39ed2f6b10cbc5b4ba4
-  custom:scripting/monoscript/fileName/Server.cs: 054602cf30190d8e25eb64e1f9678c0e -> c75d654e6ff3087c4eaa97d0fdab2ab6
-  custom:scripting/monoscript/fileName/AmbientOcclusionModelEditor.cs: 36c107c7832ce60beb9b0e53f283e926 -> 99a92cb6d65b3a11adad7b285256ee66
-  custom:scripting/monoscript/fileName/TaaComponent.cs: ed7e43ad821d7e8ba9c9732328542278 -> 7c343e97072a6712c3a2b01e75fdb7fa
-  custom:scripting/monoscript/fileName/DadMovement.cs: 53c90e293f66ec56b3e89b7007a189cb -> 5f1bbebe7ff8eede0edb67eb1bded971
-  custom:scripting/monoscript/fileName/ParadeMonitor.cs: 90cdf5ed92f20dfdd50cb0473ac9baf7 -> cae69c77ac3a6bd03788e390b0793dce
-  custom:scripting/monoscript/fileName/ClientPrediction.cs: 54f063cbf435458726496e4e36ea8983 -> 6f02724b08ab719c27b719d4f5681fae
-  custom:scripting/monoscript/fileName/BloomModelEditor.cs: 06035630788ccb9e698c0b54e175cb39 -> 82667d6cbb2e9deab73f43bddd4cb3ad
-  custom:scripting/monoscript/fileName/HistogramMonitor.cs: 50e6a954baaa958d8d3a28f762b89498 -> bb7cb63ac41d6c37c8e749994e51cd98
-  custom:scripting/monoscript/fileName/PostProcessingBehaviourEditor.cs: 596408f07e2a363624278e7e378b8078 -> 066ae7bf767a73228aa8d9e772743d81
-  custom:scripting/monoscript/fileName/PostProcessingModel.cs: 273a7d5920d09b44f5144463a6c06822 -> 2f64caba6afa59bc78865f13b6f9065d
-  custom:scripting/monoscript/fileName/EditorGUIHelper.cs: ea02d383c0fd761a54772f058e26fb88 -> 4a11466b474c4ddf8b0e969391a97509
-  custom:scripting/monoscript/fileName/DepthOfFieldModelEditor.cs: c32259adb6b7cdbd143e98e6fef0e87d -> c9db63f1a070d3e8ad359080de3aa855
-  custom:scripting/monoscript/fileName/ChromaticAberrationComponent.cs: a2aa238c1d87b5868e929305cf7e9a69 -> cda95994b71ba23d0c0f0fe0f241aab9
   custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:scripting/monoscript/fileName/activateOnPlay.cs: f4352b89f8806384e522d2aa938b6854 -> b3ec4e3494e1662ef0ec31be2aecf5cd
-  custom:scripting/monoscript/fileName/TrackballGroupDrawer.cs: 84fd749b1e63f623479f6de6fa4ebadb -> 36f1db6df3ee9bb6e23950968f1fa293
-  custom:scripting/monoscript/fileName/BuiltinDebugViewsEditor.cs: 874a703bc694fc53fc29b042397d6fd8 -> 315fb7cf21f3f53a30e4961d88029d42
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionComponent.cs: d6d899bef40dd0d777bb6a9a7a65b0ea -> 79ad7ef64576d014e73a91b6c3af0688
-  custom:scripting/monoscript/fileName/MovingTarget.cs: 85dfa9b3f207ad8bbc5284c95539caac -> d5f0d6c52766d767d049bbd5fc9a2b65
-  custom:scripting/monoscript/fileName/GetSetDrawer.cs: fd8ccbac44457df656146fc1aaaac41f -> 19bba8dcf0569bc9ff3f3eb8733c91d8
-  custom:scripting/monoscript/fileName/MotionBlurModel.cs: 57a056884a6b94653e08d34bab775577 -> 4e24ef1d444a45a9e0056ed75c7c7eb7
-  custom:scripting/monoscript/fileName/PostProcessingComponent.cs: 2dfe7725fae842a07aaf23c2d4a996b9 -> 85236d6b86a55b2f46a14367ab625049
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:scripting/monoscript/fileName/PostProcessingModelEditor.cs: ab2a8b00197c3830a2f1c57bed3ebc24 -> 5454250018fe1f45305c6e2bbb867603
-  custom:scripting/monoscript/fileName/PostProcessingMonitor.cs: 8f06d44398cdfc907cb9349b8f4935d4 -> d1e07bd8dc8b5f2f5124f2514220156a
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/MaterialFactory.cs: 63d7306d98b32527de60f41d24b42127 -> 39b00f1518fc675c62e508eb4bdec486
-  custom:scripting/monoscript/fileName/VectorscopeMonitor.cs: 4bc03971dab100bd6524e02c0160c20d -> 66a737bc4bbc432cc628d48064aabe6a
-  custom:scripting/monoscript/fileName/ColorGradingComponent.cs: 848edcce18462e32fea7d20f09e7d92b -> fc28099e3cee649b1f5925a07b57ea96
-  custom:scripting/monoscript/fileName/UserLutModel.cs: e25f1576a4a30edca2e5773438bfa6ee -> ce559ad59b29fc066f37249281afd441
-  custom:scripting/monoscript/fileName/EditorResources.cs: 51249a9d860d4e9c7770950c9170228f -> 9f83d1aedff2fa20e157243f0913ea0e
-  custom:scripting/monoscript/fileName/MinAttribute.cs: e47f1c1a544f27e247abb0d56d05095b -> 04a8151f79cf6bc016fa377feaf7e471
-  custom:scripting/monoscript/fileName/GrainComponent.cs: 3a0f02ac4a475f93f8036ee5c6d66d3c -> fae958f48caa0fab6bcf7f9c48b915e1
-  custom:scripting/monoscript/fileName/UserLutModelEditor.cs: c80bf57b759908d5e1ffcebb4a99a006 -> 342104b23101d3bfd45391c0769a34cf
-  custom:scripting/monoscript/fileName/FogComponent.cs: e616ae76e4468e3f26024a8740c26e80 -> 2dfe6d4c859eabd11b82ff8fc7d7ad22
-  custom:scripting/monoscript/fileName/DaddyGrab.cs: cef1cdd7b990fae7b4ab3ee8641e7b09 -> 564391168844020a0bbc08cf602c4cac
-  custom:scripting/monoscript/fileName/ScreenSpaceReflectionModelEditor.cs: 433fea2e8ddd4e93c53b7be0035f3751 -> 7f4dd9c1675fb2cce031c62e047539ef
-  custom:scripting/monoscript/fileName/RebindSaveLoad.cs: 9f163c44d068774dd336257fe5bbccd4 -> 
-  custom:scripting/monoscript/fileName/VignetteComponent.cs: a571817716b8e8e8e5109ea597f53d2b -> 293deb083808f71d2d18d818ef588272
-  custom:scripting/monoscript/fileName/FogModel.cs: a1d2aac64b09c41ee80cfce39850efc8 -> c4cd4da1fb97c7abf787083602f52bf5
-  custom:scripting/monoscript/fileName/WaveformMonitor.cs: eec1a342c2e6489d4110afe3aebf2233 -> 7ff9d3c5406022a31de781b40395893d
-  custom:scripting/monoscript/fileName/PlayerMovement.cs: 581a21bdf6dee81ef80ec844b7707b43 -> 
-  custom:scripting/monoscript/fileName/DitheringComponent.cs: c9ba4ad60f26a3b6b83bad733eea3323 -> 83d905897534466960141b85361bb6b4
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/AdvPlayerMovement.cs: e2134c5e2804abffb4d55fc752c14641 -> 
-  custom:scripting/monoscript/fileName/NetworkButtons.cs: d15d4d7f96f8ab46a7e8c38f8adf6d9b -> bbe0f899598c32164be5a6a7249432b6
-  custom:scripting/monoscript/fileName/VignetteModelEditor.cs: 31e8c15955bdea33977b494bba0dfc3d -> e544ec17c4d10dc7a011d82b890e61d2
-  custom:scripting/monoscript/fileName/UserLutComponent.cs: 5cb1932ead2652e7f1a9e7718c6ab4b9 -> 944143ce5f543a40c92ecea777f35ae4
-  custom:scripting/monoscript/fileName/CurveEditor.cs: 0456736c3a1c7955e62897c0245558cf -> 1cbed521cedae78619aa83bc25a705be
-  custom:scripting/monoscript/fileName/PostProcessingBehaviour.cs: ac0e09f08bd4b8a92c2ef33707439c43 -> b0fbf7f67aeee9a6f7db03386dbc8c1e
-  custom:scripting/monoscript/fileName/GrainModelEditor.cs: 6fd34d3d8c38c6c14c686cb950fee8e5 -> fc1fd3126ff1a32e5c9c0211f235c203
-  custom:scripting/monoscript/fileName/BloomModel.cs: 1b6eb5f5bda121b56a00554bbac9293d -> b4ba3e478c2698eb99512ead9d78d360
-  custom:scripting/monoscript/fileName/GrainModel.cs: 78631bfdf3658b2db12ff9a63fea49d9 -> ce4589c9bbcb55f8f632b6617dc5d1f0
+========================================================================
+Received Import Request.
+  Time since last request: 21.510459 seconds.
+  path: Assets/Prefabs/DadTest.prefab
+  artifactKey: Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DadTest.prefab using Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a31598f1c035888acf3967de9c5f8af') in 0.246740 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 358
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.917 seconds
+Refreshing native plugins compatible for Editor in 3.47 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.165 seconds
+Domain Reload Profiling: 2082ms
+	BeginReloadAssembly (186ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (81ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (632ms)
+		LoadAssemblies (229ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (460ms)
+			TypeCache.Refresh (447ms)
+				TypeCache.ScanAssembly (421ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1165ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (641ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (83ms)
+			ProcessInitializeOnLoadAttributes (378ms)
+			ProcessInitializeOnLoadMethodAttributes (168ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 1.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5474 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 68 unused Assets / (2.0 MB). Loaded Objects now: 6041.
+Memory consumption went from 340.1 MB to 338.1 MB.
+Total: 5.636111 ms (FindLiveObjects: 0.414806 ms CreateObjectMapping: 0.542706 ms MarkObjects: 4.101830 ms  DeleteObjects: 0.575964 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.978 seconds
+Refreshing native plugins compatible for Editor in 1.76 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.981 seconds
+Domain Reload Profiling: 1958ms
+	BeginReloadAssembly (184ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (75ms)
+	RebuildCommonClasses (94ms)
+	RebuildNativeTypeToScriptingClass (32ms)
+	initialDomainReloadingComplete (50ms)
+	LoadAllAssembliesAndSetupDomain (615ms)
+		LoadAssemblies (280ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (397ms)
+			TypeCache.Refresh (390ms)
+				TypeCache.ScanAssembly (372ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (981ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (614ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (77ms)
+			ProcessInitializeOnLoadAttributes (363ms)
+			ProcessInitializeOnLoadMethodAttributes (162ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Refreshing native plugins compatible for Editor in 2.21 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5475 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 64 unused Assets / (2.0 MB). Loaded Objects now: 6044.
+Memory consumption went from 340.6 MB to 338.6 MB.
+Total: 5.632432 ms (FindLiveObjects: 0.486363 ms CreateObjectMapping: 0.449269 ms MarkObjects: 4.136585 ms  DeleteObjects: 0.559123 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 191.589036 seconds.
+  path: Assets/Prefabs/DadTest.prefab
+  artifactKey: Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DadTest.prefab using Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '600abbdda1bef49814ad38f2b2c9ca79') in 0.191866 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 358
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.798 seconds
+Refreshing native plugins compatible for Editor in 1.89 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.961 seconds
+Domain Reload Profiling: 1759ms
+	BeginReloadAssembly (177ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (79ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (535ms)
+		LoadAssemblies (211ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (377ms)
+			TypeCache.Refresh (371ms)
+				TypeCache.ScanAssembly (354ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (961ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (605ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (75ms)
+			ProcessInitializeOnLoadAttributes (351ms)
+			ProcessInitializeOnLoadMethodAttributes (167ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 2.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5474 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 68 unused Assets / (2.0 MB). Loaded Objects now: 6047.
+Memory consumption went from 339.4 MB to 337.4 MB.
+Total: 5.173403 ms (FindLiveObjects: 0.469761 ms CreateObjectMapping: 0.488978 ms MarkObjects: 3.664192 ms  DeleteObjects: 0.549771 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 42.683379 seconds.
+  path: Assets/Prefabs/DadTest.prefab
+  artifactKey: Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DadTest.prefab using Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '492f523471e6ec3540bb6aaa175825ed') in 0.183587 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 358
+========================================================================
+Received Import Request.
+  Time since last request: 9.607287 seconds.
+  path: Assets/Prefabs/DadTest.prefab
+  artifactKey: Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DadTest.prefab using Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81e46c25279abf1e92d2c1db6db52c76') in 0.082181 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 358
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.789 seconds
+Refreshing native plugins compatible for Editor in 1.96 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.970 seconds
+Domain Reload Profiling: 1759ms
+	BeginReloadAssembly (178ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (81ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (523ms)
+		LoadAssemblies (207ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (369ms)
+			TypeCache.Refresh (362ms)
+				TypeCache.ScanAssembly (347ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (971ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (621ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (416ms)
+			ProcessInitializeOnLoadMethodAttributes (107ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Refreshing native plugins compatible for Editor in 1.97 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5474 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 68 unused Assets / (2.0 MB). Loaded Objects now: 6050.
+Memory consumption went from 338.5 MB to 336.5 MB.
+Total: 4.925554 ms (FindLiveObjects: 0.440803 ms CreateObjectMapping: 0.455424 ms MarkObjects: 3.543314 ms  DeleteObjects: 0.485078 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 163.836967 seconds.
+  path: Assets/Dad/genSuit
+  artifactKey: Guid(45c5909298b174cd38c32aec6bdbcc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Dad/genSuit using Guid(45c5909298b174cd38c32aec6bdbcc5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ef326c5f917898005d6601d4e9a175b') in 0.001851 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 47.067899 seconds.
+  path: Assets/Prefabs/DadTest.prefab
+  artifactKey: Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DadTest.prefab using Guid(fc8486f14e4254c7da4cf9f1ef37a4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aff1dbaef79fea56cc7e5b09b07f12e') in 0.182367 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 358

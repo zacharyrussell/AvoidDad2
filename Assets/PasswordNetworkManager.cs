@@ -38,7 +38,6 @@ public class PasswordNetworkManager : MonoBehaviour
     [ClientRpc]
     public void BabyCaughtClientRpc()
     {
-        print("Calling on Client");
         gameOver.SetActive(true);
     }
 
@@ -116,12 +115,6 @@ public class PasswordNetworkManager : MonoBehaviour
 
             menu.SetActive(false);
             passwordEntryUI.SetActive(false);
-            //lobby.SetActive(true);
-
-            //if (NetworkManager.Singleton.IsClient) {
-            //    print("CCC");
-            //    FindAnyObjectByType<LobbyLogic>().spawnLobbyPlayer(); }
-
             leaveButton.SetActive(true);
         }
        
