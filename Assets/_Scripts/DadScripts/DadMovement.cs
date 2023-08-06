@@ -21,8 +21,6 @@ public class DadMovement : NetworkBehaviour
     public float airMultiplier;
     bool readyToJump;
     bool readyToDive;
-    bool isSprinting;
-    bool isMoving;
 
     bool readyToFastFall;
 
@@ -58,16 +56,19 @@ public class DadMovement : NetworkBehaviour
     [SerializeField] CapsuleCollider collider;
 
     [SerializeField] Animator _animator;
+    [SerializeField] Animator _armAnimator;
     public UnitStamina _playerStamina = new UnitStamina(100f, 100f, 30f, false);
     [HideInInspector] public TextMeshProUGUI text_speed;
     bool gamePadConnected = false;
     PlayerState lastState;
     PlayerState playerState;
     float setGroundDrag;
+    bool diveInCooldown;
 
 
     private void Start()
     {
+        diveInCooldown = false;
         lastState = PlayerState.Idle;
         playerState = PlayerState.Idle;
         setGroundDrag = groundDrag;
@@ -97,7 +98,11 @@ public class DadMovement : NetworkBehaviour
         {
             rb.drag = groundDrag;
             readyToFastFall = true;
-            if (!readyToDive){Invoke(nameof(ResetDive), diveCooldown);}
+            if (!readyToDive && !diveInCooldown)
+            {
+                diveInCooldown = true;
+                Invoke(nameof(ResetDive), diveCooldown);
+                }
         }
 
         else
@@ -124,14 +129,6 @@ public class DadMovement : NetworkBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            isSprinting = true;
-        }
-        else
-        {
-            isSprinting = false;
-        }
 
         if (Input.GetKey(KeyCode.Q) && readyToFastFall && !grounded)
         {
@@ -165,8 +162,7 @@ public class DadMovement : NetworkBehaviour
         }
         if (Gamepad.all[0].bButton.wasPressedThisFrame && readyToDive)
         {
-            readyToDive = false;
-            groundDrag = 2;
+            
             Dive();
         }
     }
@@ -219,12 +215,12 @@ public class DadMovement : NetworkBehaviour
         {
         if (Physics.Raycast(stepLower.transform.position, transform.TransformDirection(angles[i]), 0.1f, whatIsGround))
         {
-            print("lower step detected");
+            
             if (!Physics.Raycast(stepUpper.transform.position, transform.TransformDirection(angles[i]), 0.2f, whatIsGround))
             {
                 rb.AddForce(transform.up * 90, ForceMode.Force);
                 break;
-                print("stepping up!");
+                
             }
         }}
 
@@ -235,6 +231,8 @@ public class DadMovement : NetworkBehaviour
         // calculate movement direction
         if (_playerStamina.Stamina >= diveCost)
         {
+            groundDrag = 2;
+            readyToDive = false;
             moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
             rb.AddForce(moveDirection.normalized * diveSpeed * 10f * airMultiplier, ForceMode.Impulse);
             PlayerUseStamina(diveCost);
@@ -279,6 +277,7 @@ public class DadMovement : NetworkBehaviour
     {
         groundDrag = setGroundDrag;
         readyToDive = true;
+        diveInCooldown = false;
     }
 
     private void PlayerUseStamina(float staminaAmount)
@@ -351,33 +350,37 @@ public class DadMovement : NetworkBehaviour
     {
         if (lastState != playerState)
         {
-            _animator.SetBool("isIdle", false);
-            _animator.SetBool("isWalking", false);
-            _animator.SetBool("isSprinting", false);
-            //_animator.SetBool("isJumping", false);
-            _animator.SetBool("isDiving", false);
-
-            switch (playerState)
+            Animator[] animators = {_animator, _armAnimator};
+            for (int i = 0; i < animators.Length; i++)
             {
-                case PlayerState.Idle:
-                _animator.SetBool("isIdle", true);
-                break;
+                animators[i].SetBool("isIdle", false);
+                animators[i].SetBool("isWalking", false);
+                animators[i].SetBool("isSprinting", false);
+                animators[i].SetBool("isJumping", false);
+                animators[i].SetBool("isDiving", false);
 
-                case PlayerState.Walking:
-                _animator.SetBool("isWalking", true);
-                break;
+                switch (playerState)
+                {
+                    case PlayerState.Idle:
+                    animators[i].SetBool("isIdle", true);
+                    break;
 
-                case PlayerState.Sprinting:
-                _animator.SetBool("isSprinting", true);
-                break;
+                    case PlayerState.Walking:
+                    animators[i].SetBool("isWalking", true);
+                    break;
 
-                case PlayerState.Jumping:
-                //_animator.SetBool("isJumping", true);
-                break;
+                    case PlayerState.Sprinting:
+                    animators[i].SetBool("isSprinting", true);
+                    break;
 
-                case PlayerState.Diving:
-                _animator.SetBool("isDiving", true);
-                break;
+                    case PlayerState.Jumping:
+                    animators[i].SetBool("isJumping", true);
+                    break;
+
+                    case PlayerState.Diving:
+                    animators[i].SetBool("isDiving", true);
+                    break;
+                }
             }
 
             lastState = playerState;
