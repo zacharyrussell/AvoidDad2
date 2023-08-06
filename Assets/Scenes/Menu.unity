@@ -18847,7 +18847,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 711417619}
         m_TargetAssemblyTypeName: LobbyLogic, Assembly-CSharp
-        m_MethodName: disableJoinOverlay
+        m_MethodName: disableHostOverlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20563,6 +20563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ef34420e2244f7792b31b86e18f2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverText: {fileID: 398533190}
   gameOver: {fileID: 428245001}
 --- !u!4 &2024516985
 Transform:

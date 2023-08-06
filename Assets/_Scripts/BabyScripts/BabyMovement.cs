@@ -38,7 +38,8 @@ public class BabyMovement : NetworkBehaviour
     bool isMoving;
 
     bool readyToFastFall;
-
+    [SerializeField] GameObject stepUpper;
+    [SerializeField] GameObject stepLower;
     bool readyToAirDash;
 
     [Header("Stamina")]
@@ -65,6 +66,8 @@ public class BabyMovement : NetworkBehaviour
     Rigidbody rb;
     [SerializeField] GameObject _camera;
     [SerializeField] StaminaBar _staminaBar;
+    [SerializeField] float stepHeight = 0.3f;
+
 
     [SerializeField] Animator _baby;
     public UnitStamina _playerStamina = new UnitStamina(100f, 100f, 30f, false);
@@ -92,6 +95,7 @@ public class BabyMovement : NetworkBehaviour
         readyToJump = true;
         readyToAirDash = true;
         readyToFastFall = true;
+        stepUpper.transform.position = new Vector3(stepUpper.transform.position.x, stepHeight, stepUpper.transform.position.z);
     }
 
     private void Update()
@@ -126,6 +130,7 @@ public class BabyMovement : NetworkBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
+        StepClimb();
     }
 
 
@@ -344,6 +349,26 @@ public class BabyMovement : NetworkBehaviour
         AnimatePlayer();
     }
 
+    void StepClimb()
+    {
+        Vector3[] angles = {Vector3.forward, Vector3.back, Vector3.left, Vector3.right,
+                            new Vector3(1.5f, 0f, 1f), new Vector3(-1.5f, 0f,1f), new Vector3(1.5f, 0f, -1f), new Vector3(-1.5f,0f,-1f)};
+        for (int i = 0; i < angles.Length; i++)
+        {
+            if (Physics.Raycast(stepLower.transform.position, transform.TransformDirection(angles[i]), 0.1f, whatIsGround))
+            {
+                print("lower step detected");
+                if (!Physics.Raycast(stepUpper.transform.position, transform.TransformDirection(angles[i]), 0.2f, whatIsGround))
+                {
+                    print("Stepping up");
+                    rb.AddForce(transform.up * 90, ForceMode.Force);
+                    break;
+                    
+                }
+            }
+        }
+
+    }
 
     private void AnimatePlayer()
     {

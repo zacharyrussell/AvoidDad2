@@ -23,13 +23,68 @@ public class LobbyLogic : NetworkBehaviour
         PlayerName = nameField.text;
     }
 
+    [ServerRpc(RequireOwnership = false)]
+    public void removePlayerServerRpc(ulong clientId)
+    {
+        //print("Removeing Player");
+        //print("Old Count: " + lobbyPlayers.Count.ToString());
+        int indexToRemove = 0;
+        for (int i = 0; i< lobbyPlayers.Count; i++)
+        {
+            if(lobbyPlayers[i].clientID == clientId)
+            {
+                //remove from list
+                print("FOUND");
+                indexToRemove = i;
+                break;
+                //lobbyPlayers.Remove(lobbyPlayers[i]);
+            }
+        }
+        lobbyPlayers.RemoveAt(indexToRemove);
+        //lobbyPlayers = new List<LobbyPlayer>();
+        //print("New Count: " + lobbyPlayers.Count.ToString());
+        RemovePlayerClientRpc(clientId);
+    }
 
-    public override void OnNetworkSpawn()
+
+
+    public void removePlayerLocal()
     {
         clientList = new List<ulong>();
         lobbyPlayers = new List<LobbyPlayer>();
+    }
+
+    [ClientRpc]
+    public void RemovePlayerClientRpc(ulong clientId)
+    {
+        print("removing");
+        if (clientId == NetworkManager.Singleton.LocalClientId)
+        {
+            //this player left
+            clientList = new List<ulong>();
+            lobbyPlayers = new List<LobbyPlayer>();
+        }
+
+        for (int i = 0; i < lobbyPlayers.Count; i++)
+        {
+            if (lobbyPlayers[i].clientID == clientId)
+            {
+                //remove from list
+                lobbyPlayers.Remove(lobbyPlayers[i]);
+            }
+        }
+
+    }
+
+
+    public override void OnNetworkSpawn()
+    {
+
+        
         if (IsClient)
         {
+            clientList = new List<ulong>();
+            lobbyPlayers = new List<LobbyPlayer>();
             lobbyUI.SetActive(true);
             SpawnLobbyPlayerServerRpc(NetworkManager.Singleton.LocalClientId, PlayerName);
             //FindAnyObjectByType<ListHandler>().AddLobbyPlayer(NetworkManager.Singleton.LocalClientId, "Placeholder");
@@ -42,6 +97,7 @@ public class LobbyLogic : NetworkBehaviour
     {
         startGameServerRpc();
     }
+
 
 
     [ServerRpc(RequireOwnership = false)]
@@ -116,23 +172,24 @@ public class LobbyLogic : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void SpawnLobbyPlayerServerRpc(ulong clientId, string Pname)
     {
+        if(lobbyPlayers == null)
+        {
+            clientList = new List<ulong>();
+            lobbyPlayers = new List<LobbyPlayer>();
+        }
+        
         List<ulong> playersToSpawn = new(NetworkManager.Singleton.ConnectedClientsIds);
-        lobbyPlayers.Add(new LobbyPlayer(clientId, "Undecided", Pname));
+        if (IsServer)
+        {
+            lobbyPlayers.Add(new LobbyPlayer(clientId, "Undecided", Pname));
+        }
+        
         //Sync joined players
 
         for(int i = 0; i< lobbyPlayers.Count; i++)
         {
             SpawnLobbyPlayerClientRpc(lobbyPlayers[i].clientID, lobbyPlayers[i].name, lobbyPlayers[i].selectedCharacter);
         }
-
-        //foreach(LobbyPlayer p in lobbyPlayers)
-        //{
-        //    SpawnLobbyPlayerClientRpc(p.clientID, p.name, p.selectedCharacter);
-        //}
-        //foreach(ulong id in playersToSpawn)
-        //{
-        //    SpawnLobbyPlayerClientRpc(id, Pname);
-        //}
 
     }
 
@@ -146,7 +203,11 @@ public class LobbyLogic : NetworkBehaviour
 
         FindAnyObjectByType<ListHandler>().AddLobbyPlayer(clientId, Pname, selectedCharacter);
         clientList.Add(clientId);
-        lobbyPlayers.Add(new LobbyPlayer(clientId, selectedCharacter, Pname));
+        if (!IsServer)
+        {
+            lobbyPlayers.Add(new LobbyPlayer(clientId, selectedCharacter, Pname));
+        }
+        
     }
 
 

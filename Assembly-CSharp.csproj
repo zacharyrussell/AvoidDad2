@@ -122,6 +122,7 @@
     <Compile Include="Assets/_Scripts/DadScripts/DaddyGrab.cs" />
     <Compile Include="Assets/MapAssets/GreenForest/PostProcessing/Runtime/Models/EyeAdaptationModel.cs" />
     <Compile Include="Assets/_Scripts/Networking/NetworkButtons.cs" />
+    <Compile Include="Assets/GameTimer.cs" />
     <Compile Include="Assets/MapAssets/Ultimate 10 Plus Shaders/Shaders/Plexus/Plexus.cs" />
     <Compile Include="Assets/MapAssets/GreenForest/PostProcessing/Runtime/Models/AntialiasingModel.cs" />
     <Compile Include="Assets/MapAssets/GreenForest/PostProcessing/Runtime/Models/GrainModel.cs" />

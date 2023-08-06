@@ -72,10 +72,12 @@ public class PasswordNetworkManager : MonoBehaviour
 
     public void Leave()
     {
+        FindAnyObjectByType<LobbyLogic>().removePlayerServerRpc(NetworkManager.Singleton.LocalClientId);
         if (NetworkManager.Singleton.IsHost)
         {
             NetworkManager.Singleton.Shutdown();
             NetworkManager.Singleton.ConnectionApprovalCallback -= ApprovalCheck;
+
         }
         else if (NetworkManager.Singleton.IsClient)
         {
@@ -124,11 +126,14 @@ public class PasswordNetworkManager : MonoBehaviour
     {
         if (clientId == NetworkManager.Singleton.LocalClientId)
         {
+            FindAnyObjectByType<LobbyLogic>().removePlayerLocal();
+            //FindAnyObjectByType<LobbyLogic>().removePlayerServerRpc(clientId);
             menu.SetActive(true);
             leaveButton.SetActive(false);
             lobby.SetActive(true);
             passwordEntryUI.SetActive(true);
             gameOver.SetActive(false);
+
         }
     }
 

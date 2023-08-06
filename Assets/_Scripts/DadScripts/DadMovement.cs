@@ -222,9 +222,10 @@ public class DadMovement : NetworkBehaviour
             print("lower step detected");
             if (!Physics.Raycast(stepUpper.transform.position, transform.TransformDirection(angles[i]), 0.2f, whatIsGround))
             {
+                print("stepping up!");
                 rb.AddForce(transform.up * 90, ForceMode.Force);
                 break;
-                print("stepping up!");
+                
             }
         }}
 
@@ -339,7 +340,6 @@ public class DadMovement : NetworkBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (playerState != PlayerState.Diving) return;
 
         if (collision.gameObject.CompareTag("Baby"))
         {

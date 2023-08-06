@@ -35,6 +35,10 @@ public class spawner : NetworkBehaviour
             UI_Lobby.SetActive(false);
             menuCam.SetActive(false);
         }
+        if (IsServer)
+        {
+            FindAnyObjectByType<GameLogic>().startTimer();
+        }
     }
 
 
@@ -117,7 +121,8 @@ public class spawner : NetworkBehaviour
         }
         else if (charID == 1)
         {
-            m_PrefabInstance = Instantiate(dad, Vector3.zero, Quaternion.identity);
+            Vector3 dadSpawn = new Vector3(4.0f, 0.0f, 5.0f);
+            m_PrefabInstance = Instantiate(dad, dadSpawn, Quaternion.identity);
         }
         
         // Optional, this example applies the spawner's position and rotation to the new instance
