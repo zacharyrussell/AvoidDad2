@@ -57,7 +57,7 @@ public class PlayerMovement : NetworkBehaviour
         }
         Cursor.lockState = CursorLockMode.Locked;
         playerHud.SetActive(true);
-        Baby.SetActive(false);
+        //Baby.SetActive(false);
         _camera.SetActive(true);
     }
 

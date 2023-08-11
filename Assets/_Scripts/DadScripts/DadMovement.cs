@@ -11,6 +11,7 @@ public class DadMovement : NetworkBehaviour
     public float moveSpeed;
     public float sprintSpeed;
     public float diveSpeed;
+    public float throwSpeed;
     public float groundDrag;
     public float airDrag;
 
@@ -51,9 +52,13 @@ public class DadMovement : NetworkBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
-    [SerializeField] GameObject _camera;
+    [SerializeField] Camera _camera;
     [SerializeField] StaminaBar _staminaBar;
     [SerializeField] CapsuleCollider collider;
+    [SerializeField] LayerMask whatIsPlayer;
+    [SerializeField] private float PickupRange;
+    [SerializeField] private Transform PickupTarget;
+    private Rigidbody CurrentObject;
 
     [SerializeField] Animator _animator;
     [SerializeField] Animator _armAnimator;
@@ -113,7 +118,13 @@ public class DadMovement : NetworkBehaviour
     {
         MovePlayer();
         StepClimb();
-        
+        if (CurrentObject)
+        {
+            Vector3 directionToPoint = PickupTarget.position + new Vector3(-0.5f, 0.5f, 0) - CurrentObject.position;
+            float distanceToPoint = directionToPoint.magnitude;
+
+            CurrentObject.velocity = directionToPoint * 12f * distanceToPoint;
+        }
     }
 
 
@@ -165,6 +176,10 @@ public class DadMovement : NetworkBehaviour
             
             Dive();
         }
+        if (Gamepad.all[0].rightShoulder.wasPressedThisFrame)
+        {
+            CarryDad();
+        }
     }
 
     private void MyInput()
@@ -209,6 +224,8 @@ public class DadMovement : NetworkBehaviour
 
     void StepClimb()
     {
+        if (playerState != PlayerState.Idle)
+        {
         Vector3[] angles = {Vector3.forward, Vector3.back, Vector3.left, Vector3.right, 
                             new Vector3(1.5f, 0f, 1f), new Vector3(-1.5f, 0f,1f), new Vector3(1.5f, 0f, -1f), new Vector3(-1.5f,0f,-1f)};
         for (int i = 0; i < angles.Length; i++)
@@ -222,7 +239,7 @@ public class DadMovement : NetworkBehaviour
                 break;
                 
             }
-        }}
+        }}}
 
     }
 
@@ -269,6 +286,25 @@ public class DadMovement : NetworkBehaviour
 
         rb.AddForce(-transform.up * fastFallForce, ForceMode.Impulse);
     }
+
+    private void CarryDad()
+    {
+        if (CurrentObject)
+            {
+                CurrentObject.useGravity = true;
+                CurrentObject.GetComponent<Rigidbody>().AddForce(moveDirection.normalized * throwSpeed * 10f * airMultiplier, ForceMode.Impulse);
+                CurrentObject = null;
+
+                return;
+            }
+            Ray CameraRay = _camera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+            if (Physics.Raycast(CameraRay, out RaycastHit HitInfo, PickupRange, whatIsPlayer))
+            {
+                
+                CurrentObject = HitInfo.rigidbody;
+                CurrentObject.useGravity = false;
+            }
+    }
     private void ResetJump()
     {
         readyToJump = true;
@@ -302,25 +338,28 @@ public class DadMovement : NetworkBehaviour
 
     private void UpdatePlayerState()
     {
-   
-            if (!readyToDive)
-            {
-                playerState = PlayerState.Diving;
-            }
-            
-            else if (!grounded)
-            {
-                    playerState = PlayerState.Jumping;
-            }
-            else if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
-            {
-                if (gamePadConnected && (Gamepad.all[0].leftStickButton.isPressed || Gamepad.all[0].rightTrigger.isPressed) && Input.GetAxis("Vertical") > 0)
-                    { playerState = PlayerState.Sprinting; }
+        if (CurrentObject)
+        {
+            playerState = PlayerState.Carrying;
+        }
+        else if (!readyToDive)
+        {
+            playerState = PlayerState.Diving;
+        }
+        
+        else if (!grounded)
+        {
+                playerState = PlayerState.Jumping;
+        }
+        else if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            if (gamePadConnected && (Gamepad.all[0].leftStickButton.isPressed || Gamepad.all[0].rightTrigger.isPressed) && Input.GetAxis("Vertical") > 0)
+                { playerState = PlayerState.Sprinting; }
 
-                    else if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0) { playerState = PlayerState.Sprinting; }
-                    else { playerState = PlayerState.Walking; }
-                }
-            else { playerState = PlayerState.Idle; }
+                else if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0) { playerState = PlayerState.Sprinting; }
+                else { playerState = PlayerState.Walking; }
+            }
+        else { playerState = PlayerState.Idle; }
     }
 
 
@@ -358,6 +397,7 @@ public class DadMovement : NetworkBehaviour
                 animators[i].SetBool("isSprinting", false);
                 animators[i].SetBool("isJumping", false);
                 animators[i].SetBool("isDiving", false);
+                animators[i].SetBool("isCarrying", false);
 
                 switch (playerState)
                 {
@@ -379,6 +419,10 @@ public class DadMovement : NetworkBehaviour
 
                     case PlayerState.Diving:
                     animators[i].SetBool("isDiving", true);
+                    break;
+
+                    case PlayerState.Carrying:
+                    animators[i].SetBool("isCarrying", true);
                     break;
                 }
             }

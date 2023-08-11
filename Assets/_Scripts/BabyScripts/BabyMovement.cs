@@ -13,7 +13,10 @@ public enum PlayerState
     Sprinting,
     Jumping,
     AirDashing,
-    Diving
+    Diving,
+    Carrying,
+    Throwing,
+    Held
 }
 
 

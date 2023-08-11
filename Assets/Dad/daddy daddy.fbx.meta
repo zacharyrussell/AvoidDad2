@@ -236,8 +236,126 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: genSuit_LOD0
+        weight: 1
+      - path: genSuit_LOD1
+        weight: 1
+      - path: genSuit_LOD2
+        weight: 1
+      - path: genSuit_Reference
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_LeftUpLeg
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_LeftUpLeg/genSuit_LeftLeg
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_LeftUpLeg/genSuit_LeftLeg/genSuit_LeftFoot
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_LeftUpLeg/genSuit_LeftLeg/genSuit_LeftFoot/genSuit_LeftToeBase
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_LeftUpLeg/genSuit_LeftLeg/genSuit_LeftFoot/genSuit_LeftToeBase/genSuit_LeftToeBase_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_RightUpLeg
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_RightUpLeg/genSuit_RightLeg
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_RightUpLeg/genSuit_RightLeg/genSuit_RightFoot
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_RightUpLeg/genSuit_RightLeg/genSuit_RightFoot/genSuit_RightToeBase
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_RightUpLeg/genSuit_RightLeg/genSuit_RightFoot/genSuit_RightToeBase/genSuit_RightToeBase_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_AttachHandLeft
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_AttachHandLeft/genSuit_AttachHandLeft_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandIndex1
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandIndex1/genSuit_LeftHandIndex2
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandIndex1/genSuit_LeftHandIndex2/genSuit_LeftHandIndex3
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandIndex1/genSuit_LeftHandIndex2/genSuit_LeftHandIndex3/genSuit_LeftHandIndex3_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandMiddle1
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandMiddle1/genSuit_LeftHandMiddle2
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandMiddle1/genSuit_LeftHandMiddle2/genSuit_LeftHandMiddle3
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandMiddle1/genSuit_LeftHandMiddle2/genSuit_LeftHandMiddle3/genSuit_LeftHandMiddle3_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandThumb1
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandThumb1/genSuit_LeftHandThumb2
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandThumb1/genSuit_LeftHandThumb2/genSuit_LeftHandThumb3
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_LeftShoulder/genSuit_LeftArm/genSuit_LeftForeArm/genSuit_LeftHand/genSuit_LeftHandThumb1/genSuit_LeftHandThumb2/genSuit_LeftHandThumb3/genSuit_LeftHandThumb3_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_Neck
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_Neck/genSuit_Head
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_Neck/genSuit_Head/genSuit_Head_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_AttachHandRight
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_AttachHandRight/genSuit_AttachHandRight_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandIndex1
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandIndex1/genSuit_RightHandIndex2
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandIndex1/genSuit_RightHandIndex2/genSuit_RightHandIndex3
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandIndex1/genSuit_RightHandIndex2/genSuit_RightHandIndex3/genSuit_RightHandIndex3_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandMiddle1
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandMiddle1/genSuit_RightHandMiddle2
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandMiddle1/genSuit_RightHandMiddle2/genSuit_RightHandMiddle3
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandMiddle1/genSuit_RightHandMiddle2/genSuit_RightHandMiddle3/genSuit_RightHandMiddle3_end
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandThumb1
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandThumb1/genSuit_RightHandThumb2
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandThumb1/genSuit_RightHandThumb2/genSuit_RightHandThumb3
+        weight: 1
+      - path: genSuit_Reference/genSuit_Hips/genSuit_Spine/genSuit_Spine1/genSuit_RightShoulder/genSuit_RightArm/genSuit_RightForeArm/genSuit_RightHand/genSuit_RightHandThumb1/genSuit_RightHandThumb2/genSuit_RightHandThumb3/genSuit_RightHandThumb3_end
+        weight: 1
+      - path: Light
+        weight: 1
+      maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
